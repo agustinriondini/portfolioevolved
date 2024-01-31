@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="riondini juan agustin, portfolio riondini">
+    <meta name="description" content="portfolio Riondini Juan">
+    <!--Style-->
+    <link rel="stylesheet" href="../UI/reset.css">
+    <link rel="stylesheet" href="../UI/commandCenter.css">
+    <link rel="stylesheet" href="../UI/projects.css">
+    <link rel="stylesheet" href="../UI/estanteTv.css">
+    <!--Style animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../kernel/animations.js">
+    <title>JAR | Projects</title>
+</head>
+<body>
+    <!--Menu-->
+    <div class="commandCenter">
+        <div class="logoContainer"></div>
+        <div class="navContainer">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Perfil</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="./skills.html">Habilidades</a></li>
+                    <li><a href="../subdirs/formacion.html">Formacion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section id="projects">
+        <h2 class="sectionSubtitle">Proyectos y desarrollos</h2>
+        <div class="allProjects" id="projectGallery">
+            <div class="projectContainer active">
+                <div class="imgContainer">
+                    <img src="../Images/Preview/ahorcadoV2.0.png" alt="Imagen del proyecto" id="ahorcadoPreview">
+                </div>
+                <div class="projectInfo">
+                    <h3>Ahorcado</h3>
+                    <p>Juego web creado con HTML, CSS y JavaScript</p>
+                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-AhorcadoGame.png" alt="Ahorcado_Logro">
+                    <button class="nextButton" onclick="showNextProject()">→</button>
+                </div>
+            </div>
+            <div class="projectContainer active">
+                <div class="imgContainer">
+                    <img src="../Images/Preview/encriptadorv2.png" alt="Imagen del proyecto">
+                </div>
+                <div class="projectInfo">
+                    <h3>Encriptador de textos</h3>
+                    <p>Servicio web creado con HTML, CSS y JavaScript</p>
+                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Encriptadordetexto.png" alt="Encriptador_Logro">
+                    <button class="nextButton" onclick="showNextProject()">→</button>
+                </div>
+            </div>
+            <div class="projectContainer active">
+                <div class="imgContainer">
+                    <img src="../Images/Preview/gestoria.png" alt="Imagen del proyecto">
+                </div>
+                <div class="projectInfo">
+                    <h3>Ecommerce Servicios del automotor</h3>
+                    <p>Servicio web creado con HTML, CSS y JavaScript</p>
+                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Ecommerce.png" alt="Ecommerce_Logro">
+                    <button class="nextButton" onclick="showNextProject()">→</button>
+                </div>
+            </div>
+            <div class="projectContainer active">
+                <div class="imgContainer">
+                    <img src="../Images/Preview/protfolioevolved.png" alt="Imagen del proyecto">
+                </div>
+                <div class="projectInfo">
+                    <h3>Portfolio</h3>
+                    <p>Mi primer portfolio web creado con HTML, CSS y JavaScript</p>
+                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Portfolio.png" alt="Portfolio_Logro">
+                    <button class="nextButton" onclick="showNextProject()">→</button>
+                </div>
+            </div>
+            <div class="projectContainer active">
+                <div class="imgContainer">
+                    <img src="../Images/Preview/calculadora-sueldo.png" alt="Imagen del proyecto">
+                </div>
+                <div class="projectInfo">
+                    <h3>Liquidacion de sueldos</h3>
+                    <p>Hecho en c++ perimite generar la liquidacion de haberes de un empleado</p>
+                    <button class="nextButton" onclick="showNextProject()">→</button>
+                </div>
+            </div>
+        </div>
+        <div class="powerBtnContainer">
+            <button id="powerbtn"><img src="../Images/Texturas/boton-de-encendido.png" alt="" class="powerBtnImg"></button>
+        </div>
+    </section>
+    <div class="soundbarContainer">
+        <div class="speaker">
+            <div class="speakerCore"></div>
+        </div>
+        <div class="speakerTm">
+            <h6 class="speakerTag">JAR SOUNDBAR</h6>
+        </div>
+        <div class="speaker">
+            <div class="speakerCore"></div>
+        </div>
+    </div>
+    <div class="libraryProjects">
+        <div class="arbolito">
+            <img src="../Images/Texturas/planta.png" alt="arbol" class="arbolPic">
+        </div>
+        <div class="gamesContainer">
+            <div class="gameBox">
+                <div class="projectOnLibrary">
+                    <h4 class="projectOnLibraryTitle">Ahorcado</h4>
+                </div>
+                <div class="projectExpanded">
+                    <div class="coverContainer">
+                        <div class="leftCover">
+                            <a href="https://agustinriondini.github.io/Ahorcado/" target="_blank" class="projectLink">Jugar</a>
+                            <a href="" class="projectLink">Codigo</a>
+                        </div>
+                        <div class="rightCover">
+                            <div class="cdContainer">
+                                <img src="../Images/Icons/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameBox">
+                <div class="projectOnLibrary">
+                    <h4 class="projectOnLibraryTitle">Encryptor</h4>
+                </div>
+                <div class="projectExpanded">
+                    <div class="coverContainer">
+                        <div class="leftCover">
+                            <a href="https://agustinriondini.github.io/J.A.R-Encryptor/" target="_blank" class="projectLink">Jugar</a>
+                            <a href="#" class="projectLink">Codigo</a>
+                        </div>
+                        <div class="rightCover">
+                            <div class="cdContainer">
+                                <img src="../Images/Icons/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameBox">
+                <div class="projectOnLibrary">
+                    <h4 class="projectOnLibraryTitle">Market</h4>
+                </div>
+                <div class="projectExpanded">
+                    <div class="coverContainer">
+                        <div class="leftCover">
+                            <a href="#" class="projectLink">Jugar</a>
+                            <a href="#" class="projectLink">Codigo</a>
+                        </div>
+                        <div class="rightCover">
+                            <div class="cdContainer">
+                                <img src="../Images/Icons/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameBox">
+                <div class="projectOnLibrary">
+                    <h4 class="projectOnLibraryTitle">Portfolio</h4>
+                </div>
+                <div class="projectExpanded">
+                    <div class="coverContainer">
+                        <div class="leftCover">
+                            <a href="#" class="projectLink">Jugar</a>
+                            <a href="#" class="projectLink">Codigo</a>
+                        </div>
+                        <div class="rightCover">
+                            <div class="cdContainer">
+                                <img src="../Images/Icons/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameBox">
+                <div class="projectOnLibrary">
+                    <h4 class="projectOnLibraryTitle">Sueldos</h4>
+                </div>
+                <div class="projectExpanded">
+                    <div class="coverContainer">
+                        <div class="leftCover">
+                            <a href="#" class="projectLink">Jugar</a>
+                            <a href="#" class="projectLink">Codigo</a>
+                        </div>
+                        <div class="rightCover">
+                            <div class="cdContainer">
+                                <img src="../Images/Icons/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="consola">
+            <img src="../Images/Texturas/xbox.png" alt="" class="consolaPic">
+        </div>
+    </div>
+    <script src="../kernel/slider.js"></script>
+</body>
+</html>

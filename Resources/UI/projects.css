@@ -1,0 +1,185 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#projects {
+    text-align: center;
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    align-items: center;
+    margin: auto;
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+}
+
+.allProjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+}
+
+.projectContainer {
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.projectContainer.active {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 300px;
+    display: grid; 
+    grid-template-columns: 1fr; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+.projectContainer:hover .imgContainer img {
+    filter: brightness(20%);
+
+}
+.projectContainer:hover .projectInfo {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.imgContainer>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    overflow: hidden;
+    transition: filter 0.3s;
+}
+.imgContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+.projectInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.insigniaObtenida{
+    width: 10rem;
+    aspect-ratio: 1/1;
+}
+
+.nextButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+}
+.nextButton:hover{
+    color: violet;
+    transition: ease-in-out 1s;
+}
+.projectContainer:hover .nextButton {
+    opacity: 1;
+}
+.powerBtnContainer{
+    width: 90%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 1vh;
+    min-height: 20px;
+    align-items: center;
+    margin: -1.2rem auto;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: none;
+    position: relative;
+}
+.darken {
+    filter: brightness(0%); 
+}
+
+#powerbtn{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.powerBtnImg{
+    height: 1rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: lightskyblue;
+    
+}
+.powerBtnImg:hover{
+    animation: pulse 1s infinite;
+    background-color: goldenrod;
+}
+
+.projectContainer.hidden {
+    display: none;
+}
+
+.sectionSubtitle{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px auto;
+    color: white;
+}
+.projectContainer.fade-in {
+    animation: fade-in 1s ease-out;
+}
+.displayPortContainer{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: fit-content;
+    max-height: max-content;
+    display: flex;
+    margin: auto;
+}

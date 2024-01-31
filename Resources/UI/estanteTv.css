@@ -1,0 +1,269 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*barra sonido*/
+.soundbarContainer{
+    width: 50%;
+    min-width: 150px;
+    max-width: 500px;
+    height: 2vh;
+    min-height: 30px;
+    max-height: 90px;
+    background-color: #000;
+    display: flex;
+    margin: 4rem auto 0;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 0.1rem white;
+    border-radius: 25px;
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+}
+.speaker{
+    height: 80%;
+    aspect-ratio: 1/1;
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+.speakerCore{
+    height: 0.5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: solid 5px black;
+}
+.speakerTm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.speakerTag{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    text-shadow: 2px 2px black;
+    font-style: italic;
+}
+
+/*decoracion estante*/
+.libraryProjects{
+    width: 90%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 10vh;
+    min-height: 100px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.8rem;
+    border-image: url(../Images/Texturas/madera_estante.jpg) 99 repeat;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    /*luz interna*/
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+}
+
+
+.arbolito{
+    width: 10%;
+    min-width: 90px;
+    max-width: 270px;
+    height: 90%;
+    min-height: 90px;
+    max-height: 270px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    z-index: 0;
+}
+.arbolPic{
+    width: 10%;
+    min-width: 90px;
+    max-width: 270px;
+    height: 90%;
+    min-height: 90px;
+    max-height: 270px;
+    object-fit: contain;
+    filter: brightness(90%);
+    cursor: not-allowed;
+}
+.consola{
+    width: 10%;
+    min-width: 90px;
+    max-width: 270px;
+    height: 90%;
+    min-height: 90px;
+    max-height: 270px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: auto 0;
+    margin-bottom: 0px;
+    z-index: 0;
+}
+.consolaPic{
+    width: 10%;
+    min-width: 90px;
+    max-width: 270px;
+    height: 90%;
+    min-height: 90px;
+    max-height: 270px;
+    object-fit: contain;
+    filter: brightness(90%);
+    cursor: not-allowed;
+}
+.gamesContainer{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+    max-width: 800px;
+}
+/*en biblioteca guardado*/
+/* Estilos para el gameBox */
+.gameBox {
+    position: relative;
+    width: 5%;
+    min-width: 20px;
+    max-width: 30px;
+    height: 90%;
+    min-height: 90px;
+    max-height: 270px;
+    background-color: #696666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1px;
+    cursor: pointer;
+    perspective: 1000px;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gameBox:hover {
+    width: 100%;
+    min-width: 110px;
+    max-width: 220px;
+    transition: 1s;
+}
+
+.projectOnLibraryTitle {
+    text-align: center;
+    transform: rotate(-90deg);
+    font-size: 1rem;
+}
+
+.projectExpanded {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    height: 90px;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform-origin: left center;
+    transform: rotateY(180deg);
+}
+
+.gameBox:hover .projectExpanded {
+    display: block;
+
+}
+
+.coverContainer {
+    width: 100%;
+    display: inline-flex;
+    margin: auto;
+    transform: scaleX(-1);
+}
+
+.leftCover,
+.rightCover {
+    width: 100%;
+    min-width: 55px;
+    max-width: 100px;
+    height: 100%;
+    margin: auto;
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000;
+}
+
+.cdContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    z-index: 1;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 100%;
+    min-width: 40px;
+    max-width: 80px;
+}
+
+.projectThumbail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 0;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 100%;
+    min-width: 40px;
+    max-width: 80px;
+}
+
+.projectLinkContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin: auto;
+}
+
+.projectLink {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.projectLink:hover{
+    background-color: #01458e;
+}
+.projectLink:active{
+    cursor: progress;
+}

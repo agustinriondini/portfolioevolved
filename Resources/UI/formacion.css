@@ -1,0 +1,168 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#formacion{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-evenly;
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+}
+.sectionSubtitle, .xpsubtitle{
+    color: #fff;
+    text-align: center;
+}
+.formacionContainer{
+    width: 90%;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12.5px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.collegeCard{
+    width: 90%;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
+    min-height: fit-content;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5rem;
+
+}
+.collegePic{
+    width: 100%;
+    min-width: 100px;
+    max-width: 330px;
+    aspect-ratio: 16/9;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12.5px;
+    object-fit: contain;
+    rotate: -90deg;
+}
+.collegeData{
+    color: #fff;
+}
+.collegeName{
+    font-size: 1.3rem;
+}
+.varios{
+    color: goldenrod;
+}
+.collegeInfo{
+    font-weight: lighter;
+}
+/*xp*/
+#xp{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    gap: 5px;
+    justify-content: space-evenly;
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+}
+.xpContainer{
+    width: 90%;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12.5px;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+.jobs{
+    width: 100%;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12.5px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.jobTitle{
+    color: #fff;
+    text-align: center;
+}
+.jobSub{
+    color: goldenrod;
+    text-align: center;
+}
+.joblist, .jobFirstData, .jobLastData{
+    width: 30%;
+    min-width: 140px;
+    max-width: 300px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    line-height: 1.3rem;
+}
+.joblist>ol{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.joblist>ol>li{
+    display: flex;
+    color: #fff;
+}
+.jobLink{
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.jobLink:hover{
+    background-color: #01458e;
+}
+.jobLink:active{
+    cursor: progress;
+}

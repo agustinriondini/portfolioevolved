@@ -1,0 +1,110 @@
+.commandCenter{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 10vh;
+    min-height: 40px;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: solid 1px white;
+}
+.logoContainer{
+    width: 20%;
+    min-width: 60px;
+    max-width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.navContainer{
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+.navContainer>nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+.navContainer>nav>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+.navContainer>nav>ul>li{
+    width: 18%;
+    min-width: 100px;
+    max-width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    gap: 5px;
+}
+.navContainer>nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+/* .hover a */
+.navContainer>nav>ul>li>a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.logoContainer,
+.navContainer,
+.navContainer nav ul li a {
+    opacity: 0;
+}
+
+
+/*animaciones*/
+/* Define la animación */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.commandCenter, .logoContainer, .navContainer, .navContainer nav ul li a {
+    opacity: 0; 
+}
+.commandCenter,
+.logoContainer,
+.navContainer,
+.navContainer nav ul li:nth-child(1) a,
+.navContainer nav ul li:nth-child(2) a,
+.navContainer nav ul li:nth-child(3) a,
+.navContainer nav ul li:nth-child(4) a,
+.navContainer nav ul li:nth-child(5) a {
+    animation: aparecer 1s ease-out;
+    opacity: 1;
+}
