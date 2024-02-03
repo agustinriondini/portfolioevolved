@@ -57,7 +57,7 @@
 .collegePic{
     width: 100%;
     min-width: 100px;
-    max-width: 330px;
+    max-width: 150px;
     aspect-ratio: 16/9;
     background-color: #fff;
     display: flex;

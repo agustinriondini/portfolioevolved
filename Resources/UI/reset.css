@@ -4,8 +4,8 @@
 */
 html{
 	background-image: url("../Images/Texturas/back3.jpg");
-	background-repeat: repeat;
-	background-size: fill;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: auto;
 	margin: auto;

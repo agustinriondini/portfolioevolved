@@ -12,15 +12,21 @@
     <link rel="stylesheet" href="../UI/commandCenter.css">
     <link rel="stylesheet" href="../UI/projects.css">
     <link rel="stylesheet" href="../UI/estanteTv.css">
+    <link rel="stylesheet" href="../UI/footer.css">
     <!--Style animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../kernel/animations.js">
+    <!--Version-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../kernel/version.js"></script>
+    <!--errores-->
+    <script src="../kernel/errores.js"></script>
     <title>JAR | Projects</title>
 </head>
 <body>
     <!--Menu-->
     <div class="commandCenter">
-        <div class="logoContainer"></div>
+        <!--<div class="logoContainer"></div>-->
         <div class="navContainer">
             <nav>
                 <ul>
@@ -207,4 +213,34 @@
     </div>
     <script src="../kernel/slider.js"></script>
 </body>
+<footer id="allFooter">
+    <div class="footerContainer">
+        <div class="footerBoxes">
+            <ul>
+                <li><a href="https://www.facebook.com/agustin.riondini.94/"><img src="../Images/Meta/facebook.png" alt="facebook_icon" class="socialPic">Facebook</a></li>
+                <li><a href="https://www.instagram.com/agustinriondini/"><img src="../Images/Meta/instagram.png" alt="instagram_icon class="socialPic">Instagram</a></li>
+                <li><a href="https://github.com/agustinriondini"><img src="../Images/Meta/github.png" alt="github_icon" class="socialPic">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/"><img src="../Images/Meta/linkedin.png" alt="linkedin_icon" class="socialPic">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footerBoxes">
+            <ul>
+                <li><img src="../Images/Desafios ONE/ChallengeONE-AhorcadoGame.png" alt="insignia" class="insiniaPics"></li>
+                <li><img src="../Images/Desafios ONE/ChallengeONE-Ecommerce.png" alt="insignia" class="insiniaPics"></li>
+                <li><img src="../Images/Desafios ONE/ChallengeONE-Encriptadordetexto.png" alt="insignia class="insiniaPics"></li>
+                <li><img src="../Images/Desafios ONE/ChallengeONE-Portfolio.png" alt="insignia class="insiniaPics"></li>
+            </ul>
+        </div>
+        <div class="footerBoxes">
+            <div class="buttonContainer">
+                <a class="btn" href="#" onclick="showalert(event)">Contacto</a>
+                <a class="btn" href="#" onclick="showalert(event)">Reportar errores!</a>
+            </div>
+        </div>
+    </div>
+    <div class="version">
+        <span class="compilacion" id="updateVer">Corroborando version. Espere...</span>
+        <h6 class="jarsoft">JARSoft</h6>
+    </div>
+</footer>
 </html>
