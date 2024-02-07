@@ -25,6 +25,19 @@
   .sectionSubtitle{
     color: aliceblue;
   }
+  .allSkillsHere{
+    width: 90%;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
+    min-height: fit-content;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
   
   .skillsContainer {
     display: flex;

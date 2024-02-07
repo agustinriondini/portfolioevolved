@@ -28,4 +28,11 @@ Nuevo portfolio 2024
     -se elimino el archivo profile.pic
 
 
+#build3
+-Nueva caracteristica. Loader en la seccion de proyectos. (evitar errores de visualizacion en caso de inestabilidad de la red)
+-logica del loader en Resources/kernel/loader.js
+-correccion de visualizacion en general
+-correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
+-migracion de version
+
 

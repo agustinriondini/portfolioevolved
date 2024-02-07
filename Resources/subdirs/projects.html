@@ -13,17 +13,21 @@
     <link rel="stylesheet" href="../UI/projects.css">
     <link rel="stylesheet" href="../UI/estanteTv.css">
     <link rel="stylesheet" href="../UI/footer.css">
+    <link rel="stylesheet" href="../UI/loader.css">
     <!--Style animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../kernel/animations.js">
+    <script src="./Resources/kernel/animations.js"></script>
     <!--Version-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   
     <script src="../kernel/version.js"></script>
     <!--errores-->
     <script src="../kernel/errores.js"></script>
+    
     <title>JAR | Projects</title>
 </head>
 <body>
+    <script src="../kernel/loader.js"></script>
     <!--Menu-->
     <div class="commandCenter">
         <!--<div class="logoContainer"></div>-->
@@ -31,12 +35,15 @@
             <nav>
                 <ul>
                     <li><a href="../../index.html">Perfil</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="../subdirs/projects.html">Proyectos</a></li>
                     <li><a href="./skills.html">Habilidades</a></li>
                     <li><a href="../subdirs/formacion.html">Formacion</a></li>
                 </ul>
             </nav>
         </div>
+    </div>
+    <div id="loader-container">
+        <div id="loader"></div>
     </div>
     <section id="projects">
         <h2 class="sectionSubtitle">Proyectos y desarrollos</h2>
@@ -211,8 +218,8 @@
             <img src="../Images/Texturas/xbox.png" alt="" class="consolaPic">
         </div>
     </div>
-    <script src="../kernel/slider.js"></script>
 </body>
+
 <footer id="allFooter">
     <div class="footerContainer">
         <div class="footerBoxes">
@@ -243,4 +250,6 @@
         <h6 class="jarsoft">JARSoft</h6>
     </div>
 </footer>
+<script src="../kernel/slider.js"></script>
+
 </html>
