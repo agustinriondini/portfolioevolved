@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="riondini juan agustin, portfolio riondini">
+    <meta name="description" content="portfolio Riondini Juan">
+    <!--Style-->
+    <link rel="stylesheet" href="../UI/reset.css">
+    <link rel="stylesheet" href="../UI/commandCenter.css">
+    <link rel="stylesheet" href="../UI/bugreport.css">
+    <link rel="stylesheet" href="../UI/footer.css">
+    <!--Style animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="./Resources/kernel/animations.js"></script>
+    <!--Version-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../kernel/version.js"></script>
+    <!--errores-->
+    <script src="../kernel/errores.js"></script>
+    <title>JAR | Reports</title>
+    <link rel="icon" href="../Images/Icons/mainIcon.png" type="image/x-icon">
+</head>
+<body>
+    <!--Menu-->
+    <div class="commandCenter">
+        <!--<div class="logoContainer"></div>-->
+        <div class="navContainer">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Perfil</a></li>
+                    <li><a href="../subdirs/projects.html">Proyectos</a></li>
+                    <li><a href="../subdirs/skills.html">Habilidades</a></li>
+                    <li><a href="../subdirs/formacion.html">Formacion</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </div>
+    <section id="bugSection">
+        <div class="genericContainer">
+            <form action="capturarInforme.php" method="post" class="bugReportForm" id="bugReportForm">
+                <div class="bugSelectorContainer">
+                    <label class="formLabel" for="#directorio">Directorio: </label>
+                    <select name="selector_directorio" id="directorio" required>
+                        <option value="index">Landing</option>
+                        <option value="projects">Proyectos</option>
+                        <option value="skills">Habilidades</option>
+                        <option value="college">Formacion</option>
+                    </select>
+                </div>
+                <label class="formLabel" for="#bugdetail">Detalle el problema:</label>
+                <textarea name="bugdetailtxt" id="bugdetail" cols="30" rows="10" requiered placeholder="Describa el problema"></textarea>
+                <div class="bugSelectorContainer">
+                    <label class=""formLabel for="#devices">Dispositivo: </label>
+                    <select name="device" id="devices" required>
+                        <option value="mobile">Smartphone | Tablet</option>
+                        <option value="desktop">PC</option>
+                        <option value="mobileAndDesktop">Ambos</option>
+                    </select>
+                </div>
+                <label class="formLabel" for="#anexos">Puede adjuntar mas informacion del fallo</label>
+                <input class="bugBtn" type="file" name="userFiles" id="anexos" accept="text/plain, image/jpeg, image/png, image/gif">
+                <button class="bugBtn" type="submit" formaction="capture.php" onclick="showalert(event)">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+    <footer id="allFooter">
+        <div class="footerContainer">
+            <div class="footerBoxes">
+                <ul>
+                    <li><a href="https://www.facebook.com/agustin.riondini.94/"><img src="../Images/Meta/facebook.png" alt="facebook_icon" class="socialPic">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/agustinriondini/"><img src="../Images/Meta/instagram.png" alt="instagram_icon class="socialPic">Instagram</a></li>
+                    <li><a href="https://github.com/agustinriondini"><img src="../Images/Meta/github.png" alt="github_icon" class="socialPic">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/"><img src="../Images/Meta/linkedin.png" alt="linkedin_icon" class="socialPic">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footerBoxes">
+                <ul>
+                    <li><img src="../Images/Desafios ONE/ChallengeONE-AhorcadoGame.png" alt="insignia" class="insiniaPics"></li>
+                    <li><img src="../Images/Desafios ONE/ChallengeONE-Ecommerce.png" alt="insignia" class="insiniaPics"></li>
+                    <li><img src="../Images/Desafios ONE/ChallengeONE-Encriptadordetexto.png" alt="insignia class="insiniaPics"></li>
+                    <li><img src="../Images/Desafios ONE/ChallengeONE-Portfolio.png" alt="insignia class="insiniaPics"></li>
+                </ul>
+            </div>
+            <div class="footerBoxes">
+                <div class="buttonContainer">
+                    <a class="btn" href="mailto:juan.riondini@gmail.com">Contacto</a>
+                    <!--a class="btn" href="#" onclick="showalert(event)">Reportar errores!</a-->
+                </div>
+            </div>
+        </div>
+        <div class="version">
+            <span class="compilacion" id="updateVer">Corroborando version. Espere...</span>
+            <h6 class="jarsoft">JARSoft</h6>
+        </div>
+    </footer>    
+</html>

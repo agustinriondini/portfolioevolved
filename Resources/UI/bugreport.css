@@ -1,0 +1,101 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#bugSection{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: fit-content;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    opacity: 0; 
+    animation: fade-in 2.3s ease-out forwards;
+    color: #fff;
+}
+.genericContainer{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12.5px;
+}
+
+.bugReportForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bugSelectorContainer{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0.5rem auto;
+    justify-content: center;
+    align-items: center;
+}
+#directorio, #devices{
+    text-align: center;
+}
+#directorio:hover, #devices:hover{
+    cursor: pointer;
+}
+
+.formLabel{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+    aspect-ratio: 3/1;
+    border: solid 0.1rem white;
+    background-color: transparent;
+    color: #fff;
+}
+textarea:hover{
+    border-color: goldenrod;
+    cursor: pointer;
+}
+textarea:focus{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bugBtn{
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    display: block;
+    margin: 0.5rem auto;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+}
+.bugBtn:hover{
+    cursor: pointer;
+    background-color: #01458e;
+}
+.bugBtn:active{
+    cursor: progress;
+}

@@ -145,122 +145,79 @@
 /*en biblioteca guardado*/
 /* Estilos para el gameBox */
 .gameBox {
-    margin: 0;
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
     min-width: 30px;
-    max-width: 40px;
-    height: 90%;
+    max-width: 50px;
+    height: auto;
     min-height: 90px;
-    max-height: 270px;
-    background-color: #696666;
+    max-height: 150px;
     display: flex;
-    justify-content: center;
+    z-index: 1;
     align-items: center;
-    margin-left: 1px;
-    cursor: pointer;
-    perspective: 1000px;
-    overflow: hidden;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-    transition: width 1s;
+    margin: 0;
+    justify-content: center;
+    border-right: solid 2px black;
 }
 
-.gameBox:hover {
-    width: 100%;
-    min-width: 110px;
-    max-width: 220px;
-    transition: 1s;
-    z-index: 2;
-    position: fixed;
-}
 .projectOnLibrary{
-    display: flex;
-    margin: auto;
+    display: flexbox;
 }
 .projectOnLibraryTitle {
-    text-align: center;
     transform: rotate(-90deg);
-    font-size: 1rem;
-}
+    color: #fff;
 
-.projectOnLibraryTitle:hover{
-    cursor: disabled;
+
 }
 .projectExpanded {
     display: none;
-
+    width: 0;
 
 }
 
-.gameBox:hover .projectExpanded {
-    display: block;
+
+.gameBox:hover .projectExpanded, .coverContainer {
+    display: flex;
     position: absolute;
-    top: 0;
-    left: 100%;
     width: 100%;
     min-width: 110px;
     max-width: 220px;
-    height: 90px;
+    height: 90%;
     background-color: #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform-origin: left center;
-    transform: rotateY(180deg);
-    z-index: 1;
-    transition: opacity 0.5s;
-  
-
-}
-
-.coverContainer {
-    width: 100%;
-    display: inline-flex;
-    margin: auto;
-    transform: scaleX(-1);
-}
-
-.leftCover,
-.rightCover {
-    width: 100%;
-    min-width: 55px;
-    max-width: 110px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #000;
-
-}
-
-.cdContainer {
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px auto;
     z-index: 1;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    width: 100%;
-    min-width: 40px;
-    max-width: 80px;
-    
+    min-height: 90px;
+    max-height: 150px;
+    cursor: pointer;
+    margin: auto;
+    animation: fade-in 1s ease-out forwards;
 }
+.leftCover,
+.rightCover,
+.cdContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 1;
 
+}
 
 .projectThumbail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    z-index: 0;
     border-radius: 50%;
     aspect-ratio: 1/1;
     width: 100%;
     min-width: 40px;
     max-width: 80px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin: auto;
 }
 
 .projectLinkContainer {
@@ -286,6 +243,17 @@
     max-width: 50px;
     text-align: center;
     align-items: center;
+}
+.projectLinkImg{
+    width: 1rem;
+    min-width: 16px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
 }
 .projectLink:hover{
     background-color: #01458e;

@@ -35,4 +35,15 @@ Nuevo portfolio 2024
 -correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
 -migracion de version
 
+#build4
+-Bugfixes en la estanteria de juegos. (ahora al hacer hover se puede visualizar el proximo titulo transparente para poder desplazarse sobre ellos sin problemas)
+-Bugfixes UI dispositivos moviles
+-Nuevas animaciones de los gamebox
+-Rediseñado de algunos items de la UI de la seccion proyectos
+-Correccion en lista de dispositivos. (devices.txt)
+-Agregados los recursos y links pendientes en projects.html
+-Habilitado el boton de contacto
+-Nuevo directorio errores.html
+-Nueva UI para errores.html
+-Nuevos iconos: descargas y maletin
 

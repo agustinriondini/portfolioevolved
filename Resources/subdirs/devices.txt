@@ -1,19 +1,19 @@
 
 Lista de dispositivos trabajados
 
-☑CodigoMotorola Backflip MB300Codigo
-☑CodigoMotorola Backflip MB300 AT&TCodigo
-☑CodigoMotorola DefyCodigo
-☑CodigoMotorola E2Codigo
-☑CodigoMotorola G2013Codigo
-☑CodigoMotorola G2014Codigo
-☑CodigoMotorola G4PlusCodigo
-☑CodigoMotorola G5SPlusCodigo
-☑CodigoMotorola G6Codigo
-☑CodigoMotorola G7Codigo
-☑CodigoMotorola MotoluxeCodigo
-☑CodigoMotorola QuenchCodigo
-☑CodigoSamsung A5Codigo
-☑CodigoSamsung Galaxy TabCodigo
-☑CodigoSkyworth TV (Globe devices)Codigo
-☑CodigoSmartKassel tabletCodigo
+☑Motorola Backflip MB300
+☑Motorola Backflip MB300 AT&T
+☑Motorola Defy
+☑Motorola E2
+☑Motorola G2013
+☑Motorola G2014
+☑Motorola G4Plus
+☑Motorola G5SPlus
+☑Motorola G6
+☑Motorola G7
+☑Motorola Motoluxe
+☑Motorola Quench
+☑Samsung A5
+☑Samsung Galaxy Tab
+☑Skyworth TV (Globe devices)
+☑SmartKassel tablet
