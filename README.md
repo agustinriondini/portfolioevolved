@@ -1,49 +1,54 @@
 # portfolioevolved
 Nuevo portfolio 2024
 
-#build1
--Lanzamiento del proyecto con funcionalidades basicas y limitadas
+##build1
+-[First_release]Lanzamiento del proyecto con funcionalidades basicas y limitadas
 
-#build2
-*Nuevas caracteristicas:
-    -nuevo directorio subdirs en Resources/subdirs
-    -nuevo errores.js en Resources/kernel // muestra un mensaje de error para todo lo que no se encuentre desarrollado aun
-    -nuevo version.js en Resources/kernel// muestra la version del portfolio correcta automaticamente en todas las secciones cada vez que se actualice la version en este .js
-    -nuevo footer para index.html formacion.html skills.html projects.html
-    -nuevo footer.css en Resourses/UI/footer.css
-*Correcciones y actualizaciones:
-    -agregados los scrips de las nuevas caracteristicas en cada .html
-    -correcciones menores en formacion.css
-        -no se visualizaban correctamente las imagenes de las insituciones
-    -correcciones menores en skills.css
-        -no se visualizaban correctamente las office cards en dispositivos moviles
-    -correcciones menores en projects.css
-        -correcciones de valores para mejorar la visualizacion de algunos items
-    -correcciones en reset.css
-        -se mejoro la visualizacion del background-image
-    -actualizado el registro de cambios en readme.md
-    -actualizada la version del portfolio con la nueva caracteristica version.js
-*Desactivacion de componentes
-    -se desactivo en todos los archivos .html el logoContainer del commandCenter (podria eliminarse a futuro, aun no esta decidido y se se utilizara en base al diseño inicial)
-    -se elimino el archivo profile.pic
+##build2
+-[Nueva_caracteristica]nuevo directorio subdirs en Resources/subdirs
+-[Nueva_caracteristica]nuevo errores.js en Resources/kernel // muestra un mensaje de error para todo lo que no se encuentre desarrollado aun
+-[Nueva_caracteristica]nuevo version.js en Resources/kernel// muestra la version del portfolio correcta automaticamente en todas las secciones cada vez que se actualice la version en este .js
+-[Nueva_caracteristica]nuevo footer para index.html formacion.html skills.html projects.html
+-[Nueva_caracteristica]nuevo footer.css en Resourses/UI/footer.css
+-[Nueva_caracteristica]agregados los scrips de las nuevas caracteristicas en cada .html
+-[Bugfix]correcciones menores en formacion.css
+-[Bugfix]no se visualizaban correctamente las imagenes de las insituciones
+-[Bugfix]correcciones menores en skills.css
+-[Bugfix]no se visualizaban correctamente las office cards en dispositivos moviles
+-[Bugfix]correcciones menores en projects.css
+-[Bugfix]correcciones de valores para mejorar la visualizacion de algunos items
+-[Bugfix]correcciones en reset.css
+-[Update]se mejoro la visualizacion del background-image
+-[Update]actualizado el registro de cambios en readme.md
+-[Update]actualizada la version del portfolio con la nueva caracteristica version.js
+-[Delete]se desactivo en todos los archivos .html el logoContainer del commandCenter (podria eliminarse a futuro, aun no esta decidido y se se utilizara en base al diseño inicial)
+-[Delete]se elimino el archivo profile.pic
 
 
-#build3
--Nueva caracteristica. Loader en la seccion de proyectos. (evitar errores de visualizacion en caso de inestabilidad de la red)
--logica del loader en Resources/kernel/loader.js
--correccion de visualizacion en general
--correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
--migracion de version
+##build3
+-[Nueva_caracteristica] Loader en la seccion de proyectos. (evitar errores de visualizacion en caso de inestabilidad de la red)
+-[Nueva_caracteristica]logica del loader en Resources/kernel/loader.js
+-[Bugfix]correccion de visualizacion en general
+-[Bugfix]correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
+-[Merge]migracion de version
 
-#build4
--Bugfixes en la estanteria de juegos. (ahora al hacer hover se puede visualizar el proximo titulo transparente para poder desplazarse sobre ellos sin problemas)
--Bugfixes UI dispositivos moviles
--Nuevas animaciones de los gamebox
--Rediseñado de algunos items de la UI de la seccion proyectos
--Correccion en lista de dispositivos. (devices.txt)
--Agregados los recursos y links pendientes en projects.html
--Habilitado el boton de contacto
--Nuevo directorio errores.html
--Nueva UI para errores.html
--Nuevos iconos: descargas y maletin
+##build4 v1.0.4 (07022024)
+-[Bugfix] correccion en la estanteria de juegos. (ahora al hacer hover se puede visualizar el proximo titulo transparente para poder desplazarse sobre ellos sin problemas)
+-[Bugfix] UI dispositivos moviles
+-[Correcciones_ui]Nuevas animaciones de los gamebox
+-[Correcciones_ui]Rediseñado de algunos items de la UI de la seccion proyectos
+-[Correcciones_list]Correccion en lista de dispositivos. (devices.txt)
+-[Nueva_caracteristica]Agregados los recursos y links pendientes en projects.html
+-[Nueva_caracteristica]Habilitado el boton de contacto
+-[Nueva_caracteristica]Nuevo directorio errores.html
+-[Nueva_caracteristica][Nueva UI para errores.html
+-[Nueva_caracteristica] iconos: descargas y maletin
 
+##build5 v1.0.5 (09022024)
+-[Bugfix] visualizacion de la version en dispositivos moviles
+-[Nueva_caracteristica] Nuevos iconos de android, git, linux y windows
+-[Update] Se agregaron nuevos items en Skills.html
+-[Update_ui] Se actualizaron los css de skills y footer
+-[Nueva_caracteristica] nueva UI para bugreports en errores.html
+-[Update] Actualizado el readme.me con markdown para mejorar la legibilidad del changelog. Se agrego la version y la fecha de publicacion a la build
+-[Update] Actualizado el version.js para mostrar la version correcta
