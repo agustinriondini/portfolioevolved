@@ -61,9 +61,9 @@
 
 /*decoracion estante*/
 .libraryProjects{
-    width: 90%;
+    width: 80%;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 800px;
     height: 10vh;
     min-height: 100px;
     max-height: 300px;
@@ -80,7 +80,23 @@
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
 }
+@media (max-width: 500px) {
+    .arbolito, .arbolPic, .consola, .consolaPic{
+        display: none;
+    }
+    .libraryProjects, .gamesContainer{
+        width: 90lvw;
+        max-width: 400px;
+    }
 
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    .libraryProjects, .gamesContainer{
+        width: 90lvw;
+        max-width: 668px;
+    }
+
+}
 
 .arbolito{
     width: 10%;

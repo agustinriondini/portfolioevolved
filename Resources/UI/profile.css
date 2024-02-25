@@ -18,12 +18,22 @@
     max-height: max-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: auto;
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
 }
-
+@media (max-width: 768px) {
+    #profile{
+       width: 90lvw;
+       max-width: 668px;
+    }
+    #profile > article{
+        width: 100%;
+        max-width: 668px;;
+    }
+}
 #profile > h2, h3,
 #profile > article {
     text-align: center;

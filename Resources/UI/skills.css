@@ -48,6 +48,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
     margin: auto;
     border-radius: 12.5px;
     background-color: rgba(255, 255, 255, 0.1)
@@ -134,7 +135,9 @@
     margin: auto;
   }
   .techtitle>a{
+    width: auto;
     padding: 5px 10px;
+    max-width: 100px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
@@ -192,6 +195,7 @@
     flex-wrap: wrap;
     margin: auto;
     padding: .5rem;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
 

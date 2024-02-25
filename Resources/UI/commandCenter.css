@@ -1,5 +1,5 @@
 .commandCenter{
-    width: 100%;
+    width: 100lvw;
     min-width: 300px;
     max-width: 1000px;
     height: 10vh;
@@ -12,16 +12,6 @@
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: solid 1px white;
-}
-.logoContainer{
-    width: 20%;
-    min-width: 60px;
-    max-width: 200px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
 }
 .navContainer{
     width: 80%;
@@ -68,6 +58,63 @@
     margin: auto;
     text-decoration: none;
     color: white;
+}
+@media (min-width: 768px) {
+    #toggleMenu{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .commandCenter{
+        max-width: 768px;
+        height: auto;
+        max-height: 300px;
+    }
+    .navContainer{
+        flex-direction: column;
+        max-width: 768px;
+        height: 30lvh;
+        max-height: 300px;
+        transition: max-height 1s ease-in; 
+        overflow: hidden;
+        
+    }
+    .navContainer>nav{
+        height: 100%;
+        display: flex;
+        max-width: 768px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navContainer>nav>ul{
+        flex-direction: column;
+        max-width: 768px;
+        height: 100%;
+    }
+    .navContainer>nav>ul>li{
+        height: 100%;
+    }
+    .navContainer>nav>ul>li>a{
+        height: 100%;
+        justify-content: space-around;       
+    }
+    #toggleMenu{
+        width: 2.5rem;
+        aspect-ratio: 1/1;
+        display: flex;
+        position: fixed;
+        margin: auto;
+        text-align: center;
+        rotate: 90deg;
+        justify-content: center;
+        align-items: center;
+        border: solid 0.2rem white;
+        border-radius: 50%;
+        background-color: transparent;
+        color: #fff;
+        font-weight: bolder;
+    }
+    
 }
 /* .hover a */
 .navContainer>nav>ul>li>a:hover{

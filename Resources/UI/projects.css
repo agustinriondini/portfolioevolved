@@ -8,12 +8,24 @@
         transform: translateY(0);
     }
 }
+@media (max-width: 500px) {
+    #projects, .allProjects, .projectContainer, .projectContainer.active{
+        max-width: 500px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    #projects, .allProjects, .projectContainer, .projectContainer.active{
+        width: 90lvw;
+        max-width: 668px;
+    }
+}
 #projects {
     text-align: center;
-    width: 100%;
+    width: 90%;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 900px;
     align-items: center;
+    justify-content: center;
     margin: auto;
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
@@ -26,12 +38,14 @@
     width: 90%;
     align-items: center;
     margin: auto;
+    justify-content: center;
 }
 
 .projectContainer {
     position: relative;
     overflow: hidden;
     display: none;
+    justify-content: center;
 }
 
 .projectContainer.active {
@@ -39,6 +53,7 @@
     max-width: 1000px;
     aspect-ratio: 16/9;
     max-height: 300px;
+    justify-content: center;
     display: grid; 
     grid-template-columns: 1fr; 
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -118,7 +133,7 @@
 .powerBtnContainer{
     width: 90%;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 900px;
     height: 1vh;
     min-height: 20px;
     align-items: center;

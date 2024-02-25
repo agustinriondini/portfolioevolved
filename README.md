@@ -1,10 +1,53 @@
-# portfolioevolved
-Nuevo portfolio 2024
+================================================================================================================================================
 
-##build1
--[First_release]Lanzamiento del proyecto con funcionalidades basicas y limitadas
+## build6 v1.0.6 update(public_release_v1.0.6_update_25022024_build#6)
+-[Bugfixes]Correcciones de visualizacion en varios dispositivos moviles.
+-[Fixes]Mejor responsividad
+-[New]Agregado el uso de screen media
+-[New]Nuevo menu de hamburguesa para dispositivos moviles con resolucion inferior a la necesaria para la correcta visualizacion del menu / nav.
+-[New]Nuevo funcion en ./Resources/kernel/mobilecmdcenter.js
+-[Update]index.html y subdirectorios
+-[Update]UI en (commandCenter.css, estanteTV.css, formacion.css, profile.css, projects.css y skills.css)
+-[Update]Cambios en el readme.md (el registro de cambios fue invertido para que siempre quede la ultima version al comienzo)
+-[Update]Actualizacion de version
 
-##build2
+================================================================================================================================================
+
+## build5 v1.0.5 (public_release_v1.0.5_nightly_update_09022024_build#5)
+-[Bugfix] visualizacion de la version en dispositivos moviles
+-[Nueva_caracteristica] Nuevos iconos de android, git, linux y windows
+-[Update] Se agregaron nuevos items en Skills.html
+-[Update_ui] Se actualizaron los css de skills y footer
+-[Nueva_caracteristica] nueva UI para bugreports en errores.html
+-[Update] Actualizado el readme.me con markdown para mejorar la legibilidad del changelog. Se agrego la version y la fecha de publicacion a la build
+-[Update] Actualizado el version.js para mostrar la version correcta
+
+================================================================================================================================================
+
+## build4 v1.0.4 (07022024)
+-[Bugfix] correccion en la estanteria de juegos. (ahora al hacer hover se puede visualizar el proximo titulo transparente para poder desplazarse sobre ellos sin problemas)
+-[Bugfix] UI dispositivos moviles
+-[Correcciones_ui]Nuevas animaciones de los gamebox
+-[Correcciones_ui]Rediseñado de algunos items de la UI de la seccion proyectos
+-[Correcciones_list]Correccion en lista de dispositivos. (devices.txt)
+-[Nueva_caracteristica]Agregados los recursos y links pendientes en projects.html
+-[Nueva_caracteristica]Habilitado el boton de contacto
+-[Nueva_caracteristica]Nuevo directorio errores.html
+-[Nueva_caracteristica]Nueva UI para errores.html
+-[Nueva_caracteristica]iconos: descargas y maletin
+
+================================================================================================================================================
+
+## build3
+-[Nueva_caracteristica] Loader en la seccion de proyectos. (evitar errores de visualizacion en caso de inestabilidad de la red)
+-[Nueva_caracteristica]logica del loader en Resources/kernel/loader.js
+-[Bugfix]correccion de visualizacion en general
+-[Bugfix]correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
+-[Merge]migracion de version
+
+================================================================================================================================================
+
+## build2
 -[Nueva_caracteristica]nuevo directorio subdirs en Resources/subdirs
 -[Nueva_caracteristica]nuevo errores.js en Resources/kernel // muestra un mensaje de error para todo lo que no se encuentre desarrollado aun
 -[Nueva_caracteristica]nuevo version.js en Resources/kernel// muestra la version del portfolio correcta automaticamente en todas las secciones cada vez que se actualice la version en este .js
@@ -24,31 +67,10 @@ Nuevo portfolio 2024
 -[Delete]se desactivo en todos los archivos .html el logoContainer del commandCenter (podria eliminarse a futuro, aun no esta decidido y se se utilizara en base al diseño inicial)
 -[Delete]se elimino el archivo profile.pic
 
+================================================================================================================================================
 
-##build3
--[Nueva_caracteristica] Loader en la seccion de proyectos. (evitar errores de visualizacion en caso de inestabilidad de la red)
--[Nueva_caracteristica]logica del loader en Resources/kernel/loader.js
--[Bugfix]correccion de visualizacion en general
--[Bugfix]correccion de carga del script de animaciones. (se eliminaron los errores informados en consola)
--[Merge]migracion de version
+## portfolioevolved
+Nuevo portfolio 2024
 
-##build4 v1.0.4 (07022024)
--[Bugfix] correccion en la estanteria de juegos. (ahora al hacer hover se puede visualizar el proximo titulo transparente para poder desplazarse sobre ellos sin problemas)
--[Bugfix] UI dispositivos moviles
--[Correcciones_ui]Nuevas animaciones de los gamebox
--[Correcciones_ui]Rediseñado de algunos items de la UI de la seccion proyectos
--[Correcciones_list]Correccion en lista de dispositivos. (devices.txt)
--[Nueva_caracteristica]Agregados los recursos y links pendientes en projects.html
--[Nueva_caracteristica]Habilitado el boton de contacto
--[Nueva_caracteristica]Nuevo directorio errores.html
--[Nueva_caracteristica][Nueva UI para errores.html
--[Nueva_caracteristica] iconos: descargas y maletin
-
-##build5 v1.0.5 (09022024)
--[Bugfix] visualizacion de la version en dispositivos moviles
--[Nueva_caracteristica] Nuevos iconos de android, git, linux y windows
--[Update] Se agregaron nuevos items en Skills.html
--[Update_ui] Se actualizaron los css de skills y footer
--[Nueva_caracteristica] nueva UI para bugreports en errores.html
--[Update] Actualizado el readme.me con markdown para mejorar la legibilidad del changelog. Se agrego la version y la fecha de publicacion a la build
--[Update] Actualizado el version.js para mostrar la version correcta
+## build1
+-[First_release]Lanzamiento del proyecto con funcionalidades basicas y limitadas
