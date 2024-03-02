@@ -42,7 +42,7 @@
         <div class="genericContainer">
             <form action="capturarInforme.php" method="post" class="bugReportForm" id="bugReportForm">
                 <div class="bugSelectorContainer">
-                    <label class="formLabel" for="#directorio">Directorio: </label>
+                    <label class="formLabel" for="directorio">Directorio: </label>
                     <select name="selector_directorio" id="directorio" required>
                         <option value="index">Landing</option>
                         <option value="projects">Proyectos</option>
@@ -50,22 +50,22 @@
                         <option value="college">Formacion</option>
                     </select>
                 </div>
-                <label class="formLabel" for="#bugdetail">Detalle el problema:</label>
-                <textarea name="bugdetailtxt" id="bugdetail" cols="30" rows="10" requiered placeholder="Describa el problema"></textarea>
+                <label class="formLabel" for="bugdetail">Detalle el problema:</label>
+                <textarea name="bugdetailtxt" id="bugdetail" cols="30" rows="10" required placeholder="Describa el problema"></textarea>
                 <div class="bugSelectorContainer">
-                    <label class=""formLabel for="#devices">Dispositivo: </label>
+                    <label class="formLabel" for="devices">Dispositivo: </label>
                     <select name="device" id="devices" required>
                         <option value="mobile">Smartphone | Tablet</option>
                         <option value="desktop">PC</option>
                         <option value="mobileAndDesktop">Ambos</option>
                     </select>
                 </div>
-                <label class="formLabel" for="#anexos">Puede adjuntar mas informacion del fallo</label>
+                <label class="formLabel" for="anexos">Puede adjuntar mas informacion del fallo</label>
                 <input class="bugBtn" type="file" name="userFiles" id="anexos" accept="text/plain, image/jpeg, image/png, image/gif">
-                <button class="bugBtn" type="submit" formaction="capture.php" onclick="showalert(event)">Enviar</button>
+                <button class="bugBtn" type="submit" onclick="showalert(event)">Enviar</button>
             </form>
         </div>
-    </section>
+    </section>    
     <script src="../kernel/mobilecmdcenter.js"></script>
 </body>
     <footer id="allFooter">

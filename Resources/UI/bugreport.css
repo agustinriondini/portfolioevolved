@@ -64,18 +64,33 @@
     align-items: center;
     margin: 0.5rem auto;
 }
+@media (max-width: 768px) {
+    textarea{
+        width: 80lvw;
+        max-width: 600px;
+        height: auto;
+        min-height: 500px;
+        max-height: 800px;
+        margin: auto;
+    }
+}
 textarea{
     resize: none;
-    width: 100%;
-    min-width: 300px;
+    width: 90%;
+    min-width: 270px;
     max-width: 600px;
     aspect-ratio: 3/1;
     border: solid 0.1rem white;
     background-color: transparent;
-    color: #fff;
+    color: #007bff;
+    border-radius: 12.5px;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bolder;
+    text-indent: 1rem;
 }
 textarea:hover{
-    border-color: goldenrod;
+    border-color: #007bff;
     cursor: pointer;
 }
 textarea:focus{

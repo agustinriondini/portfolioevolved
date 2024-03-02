@@ -1,5 +1,14 @@
 ================================================================================================================================================
 
+## build6 v1.0.7 update(public_release_v1.0.7_update_01032024_build#7)
+-[Update]Agregada la version 0.1.2.exe de la calculadora de sueldos en la biblioteca de proyectos.
+-[Fixes]Correcciones en la interfaz del reporte de errores para dispositivos moviles.
+-[Fixes]Correccion semantica en los footers. Se agregaron cierres faaltantes de ".
+-[Delete]Deshabilitado temporalmente el formulario nativo para reporte de errores.
+-[New]Uso de google forms temporalmente para el reporte de errores del portfolio.
+
+================================================================================================================================================
+
 ## build6 v1.0.6 update(public_release_v1.0.6_update_25022024_build#6)
 -[Bugfixes]Correcciones de visualizacion en varios dispositivos moviles.
 -[Fixes]Mejor responsividad

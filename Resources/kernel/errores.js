@@ -1,4 +1,4 @@
 function showalert(event) {
     event.preventDefault();
-    alert("Función no disponible aún");
+    alert("Ups! no sos vos, soy yo... Eso no funcionó, lo lamento");
 }
