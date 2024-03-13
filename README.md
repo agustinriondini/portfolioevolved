@@ -1,13 +1,23 @@
 ================================================================================================================================================
+## build9 v1.0.9 update(public_release_v1.0.9_update_12032024_build#9)
+-[Bugfix] Solucionado el mal comportamiento del menu-toggle en dispositivos moviles.
+-[Update] Correccion y actualizacion del readme.md.
+-[Update] Actualizacion de version.
+-[Update_UI] Cambios en el diseño del menu-toggle.
+-[Fixes] Cambios en la seccion de proyectos (estanteria tv).
+-[New] Se emite una notificacion de invitacion al nuevo proyecto 'Simulador'.
 
-## build6 v1.0.8 update(public_release_v1.0.8_update_11032024_build#8)
+
+================================================================================================================================================
+
+## build8 v1.0.8 update(public_release_v1.0.8_update_11032024_build#8)
 -[Update] Actualizacion de version
 -[Update] Readme.md
 -[New] Agregado nuevo proyecto "simulador" en /projects.html
 
 ================================================================================================================================================
 
-## build6 v1.0.7 update(public_release_v1.0.7_update_01032024_build#7)
+## build7 v1.0.7 update(public_release_v1.0.7_update_01032024_build#7)
 -[Update]Agregada la version 0.1.2.exe de la calculadora de sueldos en la biblioteca de proyectos.
 -[Fixes]Correcciones en la interfaz del reporte de errores para dispositivos moviles.
 -[Fixes]Correccion semantica en los footers. Se agregaron cierres faaltantes de ".

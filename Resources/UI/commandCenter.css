@@ -71,6 +71,7 @@
         max-height: 300px;
     }
     .navContainer{
+        display: none;
         flex-direction: column;
         max-width: 768px;
         height: 30lvh;
@@ -108,13 +109,18 @@
         rotate: 90deg;
         justify-content: center;
         align-items: center;
-        border: solid 0.2rem white;
-        border-radius: 50%;
+        border: none;
         background-color: transparent;
         color: #fff;
         font-weight: bolder;
     }
-    
+    #toggleMenu:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition-property: background-color;
+        transition-duration: 0.5s; /* Cambia la duración de la transición a 0.5 segundos (o el valor que prefieras) */
+        transition-timing-function: ease-in-out; /* Cambia la función de tiempo de la transición para una suavidad adicional */
+    }    
 }
 /* .hover a */
 .navContainer>nav>ul>li>a:hover{
