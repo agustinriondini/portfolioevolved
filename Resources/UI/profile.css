@@ -26,7 +26,7 @@
 }
 @media (max-width: 768px) {
     #profile{
-       width: 90lvw;
+       width: 90dvw;
        max-width: 668px;
     }
     #profile > article{

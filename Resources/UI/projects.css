@@ -15,7 +15,7 @@
 }
 @media screen and (min-width: 501px) and (max-width: 768px) {
     #projects, .allProjects, .projectContainer, .projectContainer.active{
-        width: 90lvw;
+        width: 90dvw;
         max-width: 668px;
     }
 }
@@ -134,7 +134,7 @@
     width: 90%;
     min-width: 300px;
     max-width: 900px;
-    height: 1vh;
+    height: 1dvh;
     min-height: 20px;
     align-items: center;
     margin: -1.2rem auto;

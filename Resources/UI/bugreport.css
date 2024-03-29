@@ -66,7 +66,7 @@
 }
 @media (max-width: 768px) {
     textarea{
-        width: 80lvw;
+        width: 80dvw;
         max-width: 600px;
         height: auto;
         min-height: 500px;

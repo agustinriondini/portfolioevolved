@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    console.log('Script cargado correctamente.');
-
     var actualver = $('#updateVer').text();
-    var lastUpdate = "public_release_v1.0.9_update_12032024_build#9";
+    var lastUpdate = "public_release_v1.1.0_update_29032024_build#10";
 
     console.log('Valor actual:', actualver);
 

@@ -1,4 +1,14 @@
 ================================================================================================================================================
+## build10 v1.1.0 update2932024_build#10
+
+-[Bugfix] Solucionado un error en la barra de navegacion al cambiar de modo retrato a landscape en moviles.
+-[Fix] Cambio de uso de vw, vh, lvw, lvh a dwh y dvw.
+-[Update] Agregado nuevo proyecto en projects.html
+-[Update] Actualizado el readme.md
+-[Update] Actualizada la version del porfolio
+
+
+================================================================================================================================================
 ## build9 v1.0.9 update(public_release_v1.0.9_update_12032024_build#9)
 -[Bugfix] Solucionado el mal comportamiento del menu-toggle en dispositivos moviles.
 -[Update] Correccion y actualizacion del readme.md.

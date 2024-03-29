@@ -13,7 +13,7 @@
     width: 50%;
     min-width: 150px;
     max-width: 500px;
-    height: 2vh;
+    height: 2dvh;
     min-height: 30px;
     max-height: 90px;
     background-color: #000;
@@ -64,7 +64,7 @@
     width: 80%;
     min-width: 300px;
     max-width: 800px;
-    height: 10vh;
+    height: 10dvh;
     min-height: 100px;
     max-height: 300px;
     margin: auto;
@@ -85,14 +85,14 @@
         display: none;
     }
     .libraryProjects, .gamesContainer{
-        width: 90lvw;
+        width: 90dvw;
         max-width: 400px;
     }
 
 }
 @media screen and (min-width: 501px) and (max-width: 768px) {
     .libraryProjects, .gamesContainer{
-        width: 90lvw;
+        width: 90dvw;
         max-width: 668px;
     }
 
