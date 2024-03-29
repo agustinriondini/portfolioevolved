@@ -1,8 +1,11 @@
 ================================================================================================================================================
-## build10 v1.1.0 update2932024_build#10
+## build10 v1.1.0 update2932024_build#10 --> #11
 
 -[Bugfix] Solucionado un error en la barra de navegacion al cambiar de modo retrato a landscape en moviles.
 -[Fix] Cambio de uso de vw, vh, lvw, lvh a dwh y dvw.
+-[Fix] Corregido el link del proyecto Q-Lo S.
+-[Fix] Se rehabilito el script animations.js que habia sido desactivado temporalmente.
+-[Update] Se cambio el contenido de news.js
 -[Update] Agregado nuevo proyecto en projects.html
 -[Update] Actualizado el readme.md
 -[Update] Actualizada la version del porfolio
