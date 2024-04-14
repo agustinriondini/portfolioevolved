@@ -1,0 +1,98 @@
+@keyframes fade-in {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+#tvSection{
+width: 100lvw;
+min-width: 300px;
+max-width: 1000px;
+height: auto;
+min-height: fit-content;
+margin: 1rem auto;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: aparecer 1s ease-out;
+opacity: 1;
+}
+#tvContainer{
+display: flex;
+margin: auto;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+#tvDisplay{
+width: 90lvw;
+min-width: 270px;
+max-width: 900px;
+aspect-ratio: 16/9;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+background-color: black;
+border: none;
+cursor: pointer;
+object-fit: contain;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+position: relative;
+
+}
+#tvDisplay video {
+width: 100%; 
+height: auto;
+}
+#ledNotif{
+border: solid 0.1rem;
+width: 3rem;
+height: 0.1rem;
+display: flex;
+position: absolute;
+bottom: 0px;
+margin: 0;
+box-shadow: 0px 0px 10px red;
+}
+#tvButtons{
+display: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+width: 33%;
+max-width: 200px;
+aspect-ratio: 2/1;
+margin: auto;
+border: solid 0.1rem white;
+border-radius: 12.5px;
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.tvBtn{
+width: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+aspect-ratio: 1/1;
+cursor: pointer;
+border: none;
+background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tvBtn:hover{
+background-color: greenyellow;
+}
+
+/*/tv activada- se maximiza/*/
+

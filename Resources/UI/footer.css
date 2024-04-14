@@ -9,26 +9,28 @@
     }
 }
 
-#allFooter{
+/* Estilos para el footer principal */
+#allFooter {
     width: 100%;
-    min-width: 300px;
     max-width: 1000px;
-    align-items: center;
+    min-width: 300px;
     min-height: fit-content;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin: 4rem auto;
-    margin-bottom: 0;
-    opacity: 0; 
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto 0 auto;
+    opacity: 0;
     animation: fade-in 2.3s ease-out forwards;
     background-color: rgba(0, 0, 0, 0.5);
     border-top: solid 1px white;
 }
-.footerContainer{
+
+/* Estilos para los contenedores de los elementos del footer */
+.footerContainer {
     width: 90%;
-    min-width: 300px;
     max-width: 1000px;
+    min-width: 300px;
     height: auto;
     min-height: fit-content;
     margin: auto;
@@ -36,19 +38,21 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.footerBoxes{
+
+/* Estilos para las cajas dentro del footer */
+.footerBoxes {
     width: 30%;
-    min-width: 150px;
     max-width: 300px;
+    min-width: 150px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-
 }
-.footerBoxes>ul{
+
+/* Estilos para las listas dentro de las cajas del footer */
+.footerBoxes>ul {
     display: flex;
-    height: auto;
     height: 100%;
     min-height: 150px;
     justify-content: center;
@@ -56,16 +60,20 @@
     flex-direction: column;
     margin: auto;
 }
-.footerBoxes>ul>li{
+
+/* Estilos para los elementos de las listas dentro de las cajas del footer */
+.footerBoxes>ul>li {
     display: flex;
     width: 25%;
     justify-content: center;
     align-items: center;
-    display: flex;
     margin: auto;
 }
-.footerBoxes>ul>li>a{
+
+/* Estilos para los enlaces dentro de las listas dentro de las cajas del footer */
+.footerBoxes>ul>li>a {
     width: 25%;
+    max-width: 2rem;
     min-width: 2rem;
     aspect-ratio: 1/1;
     display: flex;
@@ -77,13 +85,16 @@
     font-size: 1rem;
     color: #fff;
 }
-.footerBoxes>ul>li>a:hover{
+
+.footerBoxes>ul>li>a:hover {
     color: goldenrod;
     transition: ease-in 1s;
+}
 
-}
-.footerBoxes>ul>li>a>img{
+.footerBoxes>ul>li>a>img,
+.footerBoxes>ul>li>img {
     width: 25%;
+    max-width: 2rem;
     min-width: 2rem;
     aspect-ratio: 1/1;
     object-fit: contain;
@@ -91,26 +102,21 @@
     align-items: center;
     margin: auto;
 }
-.footerBoxes>ul>li>img{
-    width: 25%;
-    min-width: 2rem;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-.buttonContainer{
+
+/* Estilos para el contenedor de botones */
+.buttonContainer {
     width: 100%;
-    min-width: 150px;
     max-width: 300px;
+    min-width: 150px;
     aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.btn{
+
+/* Estilos para los botones */
+.btn {
     min-width: 140px;
     padding: 5px 10px;
     background-color: #007bff;
@@ -121,16 +127,18 @@
     justify-content: center;
     margin-top: 5px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #01458e;
 }
-.btn:active{
+
+.btn:active {
     cursor: progress;
 }
-.version{
+.version {
     width: 100%;
-    min-width: 300px;
     max-width: 1000px;
+    min-width: 300px;
     height: auto;
     min-height: 30px;
     display: flex;
@@ -140,17 +148,16 @@
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.compilacion{
+
+.compilacion,
+.jarsoft {
     display: flex;
     margin: auto;
-    height: 100%;
     font-size: 0.8rem;
     color: grey;
 }
-.jarsoft{
-    display: flex;
-    margin: auto;
+
+.jarsoft {
     font-size: 1rem;
-    color: grey;
     font-style: italic;
 }

@@ -1,283 +1,230 @@
 @keyframes fade-in {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-#skills {
-    width: 100%;
-    min-width: 300px;
-    max-width: 1000px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-    gap: 5px;
-    justify-content: space-evenly;
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
-  }
-  .sectionSubtitle{
-    color: aliceblue;
-  }
-  .allSkillsHere{
-    width: 90%;
-    min-width: 300px;
-    max-width: 900px;
-    height: auto;
-    min-height: fit-content;
-    gap: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-  }
-  
-  .skillsContainer {
-    display: flex;
-    width: 20%;
-    min-width: 140px;
-    max-width: 200px;
-    aspect-ratio: 1/1;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    flex-grow: 1;
-    margin: auto;
-    border-radius: 12.5px;
-    background-color: rgba(255, 255, 255, 0.1)
-  }
-  .skill{
-    width: auto;
-    height: auto;
-  }
-  .skillsCard {
-    width: 70%;
-    min-width: 98px;
-    max-width: 126px;
-    aspect-ratio: 1/1;
-    border-radius: 12.5px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    
-  }
 
-  .skillIcon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-  }
-  .skillIcon:hover{
-    transform: rotatey(360deg);
-    transition: 2s;
+/* General */
+#skills,
+.techsContainer,
+.office,
+#extras,
+#logros {
+  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
+  height: auto;
+  min-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  gap: 5px;
+  justify-content: space-evenly;
+  opacity: 0;
+  animation: fade-in 2.3s ease-out forwards;
+}
 
-  }
-  .skillIconAlt{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    filter: grayscale(100%);
-    cursor: not-allowed;
-  }
-  .skillName{
-    color: white;
-    text-align: center;
-  }
-  /*techs*/
-  .techsContainer{
-    width: 100%;
-    min-width: 300px;
-    max-width: 1000px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-    gap: 5px;
-    justify-content: space-evenly;
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
-  }
-  .techCard{
-    width: 90%;
-    min-width: 300px;
-    max-width: 900px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: .5rem;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 12.5px;
-  }
-  .techtitle{
-    color:  #fff;
-    text-align: center;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: auto;
-  }
-  .techtitle>a{
-    width: auto;
-    padding: 5px 10px;
-    max-width: 100px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 5px;
-  }
-  .techtitle>a:hover{
-    background-color: #01458e;
-  }
-  .techtitle>a:active{
-    cursor: progress;
-  }
-  .techData{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
+/* Sections */
+.sectionSubtitle,
+.officeTitle {
+  color: aliceblue;
+}
 
-  .techData>ul{
-    font-size: 0.8rem;
-    color: #fff;
-    line-height: 1.5rem;
-  }
-  .techData>ul>li{
-    list-style-type: '☑';
-  }
-  .techData>ul>li::marker{
-    font-size: 1.5rem;
-  }
-  
-  /*office*/
-  .office{
-    width: 100%;
-    min-width: 300px;
-    max-width: 1000px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-    gap: 5px;
-    justify-content: space-evenly;
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
-  }
-  .officeContainer{
-    width: 90%;
-    min-width: 300px;
-    max-width: 900px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: .5rem;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
+/* Skills */
+.allSkillsHere,
+.techCard,
+.logrosContainer,
+.officeContainer {
+  width: 90%;
+  min-width: 300px;
+  max-width: 900px;
+  height: auto;
+  min-height: fit-content;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
 
-  }
-  .officeCard{
-    width: 33%;
-    min-width: 170px;
-    max-width: 300px;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: auto;
-    border-radius: 12.5px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  .officeTitle{
-    color: #fff;
-  }
-  .officeCard>ul{
-    font-size: 0.8rem;
-    color: #fff;
-    line-height: 1.5rem;
-  }
-  
-  .officeCard>ul>li{
-    list-style-type: '☑';
-  }
-  .officeCard>ul>li::marker{
-    color: greenyellow;
-    font-size: 1.5rem;
-  }
-  #extras{
-    width: 100%;
-    min-width: 300px;
-    max-width: 1000px;
-    height: auto;
-    min-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-    gap: 5px;
-    justify-content: space-evenly;
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
-  }
+.skillsContainer,
+.officeCard,
+.logro {
+  display: flex;
+  width: 20%;
+  min-width: 140px;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: auto;
+  border-radius: 12.5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-  #windows{
-    background: linear-gradient(to left, rgba(51, 51, 240, 1), rgba(51, 51, 240, 0.5), rgba(51, 51, 240, 0.3), rgba(51, 51, 240, 0.15));
-  }
-  #linux{
-    background: linear-gradient(to left, rgba(160, 21, 114, 1), rgba(160, 21, 114, 0.5), rgba(160, 21, 114, 0.3), rgba(160, 21, 114, 0.15));
-  }
-  #android{
-    background: linear-gradient(to left, rgba(172, 255, 47, 1), rgb(172, 255, 47, 0.5), rgba(172, 255, 47, 0.3), rgba(172, 255, 47, 0.15));
+.skill,
+.skillIcon,
+.skillIconAlt {
+  width: auto;
+  height: auto;
+}
 
-  }
-   #git{
-    background: linear-gradient(to left, rgba(255, 140, 1, 1), rgba(255, 140, 1, 0.5), rgba(255, 140, 1, 0.3), rgba(255, 140, 1, 0.15));
-   }
-#windows_icon{
+.skillsCard, .logroPic {
+  width: 70%;
+  min-width: 98px;
+  max-width: 126px;
+  aspect-ratio: 1/1;
+  border-radius: 12.5px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.skillIcon,
+.logroPicStyle,
+.skillIconAlt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.skillIcon:hover {
+  transform: rotatey(360deg);
+  transition: 2s;
+}
+.logroPicStyle:hover {
+  transform: scale(1.3); 
+  transition: transform 0.5s ease;
+}
+.skillIconAlt {
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.skillName, .logroTitle, .logroDesc {
+  color: white;
+  text-align: center;
+}
+
+/* Techs */
+.techtitle {
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+}
+
+.techtitle > a {
+  width: auto;
+  padding: 5px 10px;
+  max-width: 100px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.techtitle > a:hover {
+  background-color: #01458e;
+}
+
+.techtitle > a:active {
+  cursor: progress;
+}
+
+.techData {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.techData > ul {
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.5rem;
+}
+
+.techData > ul > li {
+  list-style-type: '☑';
+}
+
+.techData > ul > li::marker {
+  font-size: 1.5rem;
+}
+
+/* Office */
+.officeCard > ul {
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.5rem;
+}
+
+.officeCard > ul > li {
+  list-style-type: '☑';
+}
+
+.officeCard > ul > li::marker {
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+
+/* Icons */
+#windows_icon,
+#linux_icon,
+#droid_icon,
+#git_icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#windows_icon {
   background-image: url(../Images/Icons/windows.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
-#linux_icon{
+
+#linux_icon {
   background-image: url(../Images/Icons/linux.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
-#droid_icon{
+
+#droid_icon {
   background-image: url(../Images/Icons/androide.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
-#git_icon{
+
+#git_icon {
   background-image: url(../Images/Icons/git.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+}
+
+/* Backgrounds */
+#windows {
+  background: linear-gradient(to left, rgba(51, 51, 240, 1), rgba(51, 51, 240, 0.5), rgba(51, 51, 240, 0.3), rgba(51, 51, 240, 0.15));
+}
+
+#linux {
+  background: linear-gradient(to left, rgba(160, 21, 114, 1), rgba(160, 21, 114, 0.5), rgba(160, 21, 114, 0.3), rgba(160, 21, 114, 0.15));
+}
+
+#android {
+  background: linear-gradient(to left, rgba(172, 255, 47, 1), rgb(172, 255, 47, 0.5), rgba(172, 255, 47, 0.3), rgba(172, 255, 47, 0.15));
+}
+
+#git {
+  background: linear-gradient(to left, rgba(255, 140, 1, 1), rgba(255, 140, 1, 0.5), rgba(255, 140, 1, 0.3), rgba(255, 140, 1, 0.15));
 }

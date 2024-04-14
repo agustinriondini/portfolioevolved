@@ -11,15 +11,19 @@
     <link rel="stylesheet" href="../UI/reset.css">
     <link rel="stylesheet" href="../UI/commandCenter.css">
     <link rel="stylesheet" href="../UI/projects.css">
+    <link rel="stylesheet" href="../UI/tvdisplay.css">
     <link rel="stylesheet" href="../UI/estanteTv.css">
     <link rel="stylesheet" href="../UI/footer.css">
     <link rel="stylesheet" href="../UI/loader.css">
     <!--Style animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script type="text/Javascript" src="./Resources/kernel/animations.js"></script>
     <!--Version-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../kernel/mobilecmdcenter.js"></script>
+    <script src="../kernel/news.js"></script>
+    <script src="../kernel/TV-code/expand.js"></script>
+    <script src="../kernel/TV-code/pushGame.js"></script>
+    <script src="../kernel/TV-code/tvEnhaner.js"></script>
     <script src="../kernel/version.js"></script>
     <!--errores-->
     <script src="../kernel/errores.js"></script>
@@ -46,66 +50,16 @@
     <div id="loader-container">
         <div id="loader"></div>
     </div>
-    <section id="projects">
-        <h2 class="sectionSubtitle">Proyectos y desarrollos</h2>
-        <div class="allProjects" id="projectGallery">
-            <div class="projectContainer active">
-                <div class="imgContainer">
-                    <img src="../Images/Preview/ahorcadoV2.0.png" alt="Imagen del proyecto" id="ahorcadoPreview">
-                </div>
-                <div class="projectInfo">
-                    <h3>Ahorcado</h3>
-                    <p>Juego web creado con HTML, CSS y JavaScript</p>
-                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-AhorcadoGame.png" alt="Ahorcado_Logro">
-                    <button class="nextButton" onclick="showNextProject()">→</button>
-                </div>
+    <section id="tvSection">
+        <div id="tvContainer">
+            <div id="tvDisplay"></div>
+            <div id="ledNotif"></div>
+            <div id="tvButtons">
+                <button id="tvPower" class="tvBtn" onclick="powerTV()">◉</button>
+                <button id="tvReboot" class="tvBtn" onclick="rebootTV()">↺</button>
+                <button id="tvResize" class="tvBtn" onclick="maxTv()">↗</button>
+                <button id="tvHome" class="tvBtn"  onclick="showUnavailableAlert(event)">▣</button><!--homeAction() nombre de la funcion final-->
             </div>
-            <div class="projectContainer active">
-                <div class="imgContainer">
-                    <img src="../Images/Preview/encriptadorv2.png" alt="Imagen del proyecto">
-                </div>
-                <div class="projectInfo">
-                    <h3>Encriptador de textos</h3>
-                    <p>Servicio web creado con HTML, CSS y JavaScript</p>
-                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Encriptadordetexto.png" alt="Encriptador_Logro">
-                    <button class="nextButton" onclick="showNextProject()">→</button>
-                </div>
-            </div>
-            <div class="projectContainer active">
-                <div class="imgContainer">
-                    <img src="../Images/Preview/gestoria.png" alt="Imagen del proyecto">
-                </div>
-                <div class="projectInfo">
-                    <h3>Ecommerce Servicios del automotor</h3>
-                    <p>Servicio web creado con HTML, CSS y JavaScript</p>
-                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Ecommerce.png" alt="Ecommerce_Logro">
-                    <button class="nextButton" onclick="showNextProject()">→</button>
-                </div>
-            </div>
-            <div class="projectContainer active">
-                <div class="imgContainer">
-                    <img src="../Images/Preview/protfolioevolved.png" alt="Imagen del proyecto">
-                </div>
-                <div class="projectInfo">
-                    <h3>Portfolio</h3>
-                    <p>Mi primer portfolio web creado con HTML, CSS y JavaScript</p>
-                    <img class="insigniaObtenida" src="../Images/Desafios ONE/ChallengeONE-Portfolio.png" alt="Portfolio_Logro">
-                    <button class="nextButton" onclick="showNextProject()">→</button>
-                </div>
-            </div>
-            <div class="projectContainer active">
-                <div class="imgContainer">
-                    <img src="../Images/Preview/calculadora-sueldo.png" alt="Imagen del proyecto">
-                </div>
-                <div class="projectInfo">
-                    <h3>Liquidacion de sueldos</h3>
-                    <p>Hecho en c++ perimite generar la liquidacion de haberes de un empleado</p>
-                    <button class="nextButton" onclick="showNextProject()">→</button>
-                </div>
-            </div>
-        </div>
-        <div class="powerBtnContainer">
-            <button id="powerbtn"><img src="../Images/Texturas/boton-de-encendido.png" alt="" class="powerBtnImg"></button>
         </div>
     </section>
     <div class="soundbarContainer">
@@ -132,7 +86,7 @@
                     <div class="coverContainer">
                         <div class="leftCover">
                             <a href="https://agustinriondini.github.io/Ahorcado/" target="_blank" class="projectLink">Online</a>
-                            <a href="https://github.com/agustinriondini/Ahorcado" target="_blank" class="projectLink">Codigo</a>
+                            <button id="Ahorcado" class="stableBtn" onclick="playGameOnTv(this.id)">▶Jugar</button>
                         </div>
                         <div class="rightCover">
                             <div class="cdContainer">
@@ -150,7 +104,7 @@
                     <div class="coverContainer">
                         <div class="leftCover">
                             <a href="https://agustinriondini.github.io/J.A.R-Encryptor/" target="_blank" class="projectLink">Probar</a>
-                            <a href="https://github.com/agustinriondini/J.A.R-Encryptor" target="_blank" class="projectLink">Codigo</a>
+                            <button id="J.A.R-Encryptor" class="stableBtn" onclick="playGameOnTv(this.id)">▶Jugar</button>
                         </div>
                         <div class="rightCover">
                             <div class="cdContainer">
@@ -185,7 +139,6 @@
                 <div class="projectExpanded">
                     <div class="coverContainer">
                         <div class="leftCover">
-                            <!--a href="https://agustinriondini.github.io/portfolioevolved/Resources/subdirs/projects.html" target="_blank" class="projectLink">Ver</a-->
                             <a href="https://github.com/agustinriondini/portfolioevolved" target="_blank" class="projectLink">Codigo</a>
                         </div>
                         <div class="rightCover">
@@ -221,7 +174,7 @@
                 <div class="projectExpanded">
                     <div class="coverContainer">
                         <div class="leftCover">
-                            <a href="https://agustinriondini.github.io/neosimulator/" target="_blank" class="projectLink">Jugar</a>
+                            <a href="https://agustinriondini.github.io/neosimulator/" target="_blank" class="projectLink">Online</a>
                             <a href="https://github.com/agustinriondini/neosimulator" class="projectLink">Codigo</a>
                         </div>
                         <div class="rightCover">
@@ -239,8 +192,8 @@
                 <div class="projectExpanded">
                     <div class="coverContainer">
                         <div class="leftCover">
-                            <a href="https://agustinriondini.github.io/qlosucio/" target="_blank" class="projectLink">Jugar</a>
-                            <a href="https://github.com/agustinriondini/qlosucio" class="projectLink">Codigo</a>
+                            <a href="https://agustinriondini.github.io/qlosucio/" target="_blank" class="projectLink">Online</a>
+                            <button id="qlosucio" class="stableBtn" onclick="playGameOnTv(this.id)">▶Jugar</button>
                         </div>
                         <div class="rightCover">
                             <div class="cdContainer">
@@ -276,8 +229,8 @@
         </div>
         <div class="footerBoxes">
             <div class="buttonContainer">
-                <a class="btn" href="mailto:juan.riondini@gmail.com">Contacto</a>
-                <a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">Reportar errores!</a>
+                <a class="btn" href="mailto:juan.riondini@gmail.com">📧 Contacto</a>
+                <a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">🐞Reportar errores!</a>
             </div>
         </div>
     </div>
@@ -286,6 +239,6 @@
         <h6 class="jarsoft">JARSoft</h6>
     </div>
 </footer>
-<script src="../kernel/slider.js"></script>
 <script src="../kernel/news.js"></script>
+<script src="../kernel/animations.js"></script>
 </html>

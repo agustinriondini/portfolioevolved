@@ -11,7 +11,9 @@ Lista de dispositivos trabajados
 ☑Motorola G5SPlus
 ☑Motorola G6
 ☑Motorola G7
-☑Motorola Motoluxe
+☑Motorola G7 Power
+☑Motorola Motoluxe XT-615
+☑Motorola Power
 ☑Motorola Quench
 ☑Samsung A5
 ☑Samsung Galaxy Tab

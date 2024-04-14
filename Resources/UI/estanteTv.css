@@ -245,21 +245,6 @@
     z-index: 1;
     margin: auto;
 }
-
-.projectLink {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 5px;
-    width: 100%;
-    min-width: 30px;
-    max-width: 50px;
-    text-align: center;
-    align-items: center;
-}
 .projectLinkImg{
     width: 1rem;
     min-width: 16px;
@@ -275,5 +260,26 @@
     background-color: #01458e;
 }
 .projectLink:active{
+    cursor: progress;
+}
+.stableBtn, .projectLink{
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    margin-top: 5px;
+    justify-content: center;
+    min-width: 30px;
+    max-width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.stableBtn:hover{
+    background-color: #01458e;
+}
+.stableBtn:active{
     cursor: progress;
 }

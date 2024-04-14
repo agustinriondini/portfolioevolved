@@ -1,4 +1,15 @@
 ================================================================================================================================================
+## build12 v1.1.1 update14042024_build#12
+-[Delete]Se elimino el contenido: errores.html, bugreport.css, errores.js, slider.js, email.png y qr.png.
+-[Update]Devices.txt (Se agregaron a la lista los dispositivos Moto G7 Power, Motorola Power y se agrego el modelo correpondiente a Motoluxe).
+-[Update-ver]Actualizada la version y el readme.md
+-[Fixes]Se mejoraron la legibilidad y los atributos en los .css "estanteTv", "footer", "loader", "projects" y "skills".
+-[New]Se incorporo el diseño del proyecto neosimulator en la seccion projects.html reemplazando el viejo diseño de tv.
+-[Added]Se agrego bootanimation.mp4, rebootLoader.mp4, expandjs, pushGame.js, tvEnhancer.js, Cadillac.jpg y tvdisplay.css.
+-[Mods]Modificados news.js (ahora funciona como centro de mensajes, incluye los erores), index.html (Se agrego un icono de emall en contacto), formacion.html, projects.html (se reemplazo la vieja tv), skills.html (se agregaron los logros de aluraLatam-ONE).
+
+
+================================================================================================================================================
 ## build10 v1.1.0 update2932024_build#10 --> #11
 
 -[Bugfix] Solucionado un error en la barra de navegacion al cambiar de modo retrato a landscape en moviles.
