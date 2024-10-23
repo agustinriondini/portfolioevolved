@@ -71,7 +71,7 @@
     max-height: 300px;
     display: grid;
     grid-template-columns: 1fr;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px var(--color-ultratransparente-claro);
 }
 
 /* Estilos de la imagen del proyecto */
@@ -103,7 +103,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--color-blanco);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -120,7 +120,7 @@
     right: 10px;
     font-size: 24px;
     background: none;
-    color: #fff;
+    color: var(--color-blanco);
     cursor: pointer;
     border: none;
     opacity: 0;
@@ -187,7 +187,7 @@
     text-align: center;
     text-transform: uppercase;
     margin: 10px auto;
-    color: white;
+    color: var(--color-blanco);
 }
 
 .projectContainer.fade-in {

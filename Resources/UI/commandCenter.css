@@ -10,8 +10,8 @@
     margin: auto;
     flex-wrap: wrap;
     backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: solid 1px white;
+    background-color: var(--color-transparencia-oscuro);
+    border-bottom: solid 1px var(--color-blanco);
 }
 .navContainer{
     width: 80%;
@@ -57,7 +57,7 @@
     align-items: center;
     margin: auto;
     text-decoration: none;
-    color: white;
+    color: var(--color-blanco);
 }
 @media (min-width: 768px) {
     #toggleMenu{
@@ -111,12 +111,12 @@
         align-items: center;
         border: none;
         background-color: transparent;
-        color: #fff;
+        color: var(--color-blanco);
         font-weight: bolder;
     }
     #toggleMenu:hover {
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: var(--color-ultratransparente-claro);
         transition-property: background-color;
         transition-duration: 0.5s; /* Cambia la duración de la transición a 0.5 segundos (o el valor que prefieras) */
         transition-timing-function: ease-in-out; /* Cambia la función de tiempo de la transición para una suavidad adicional */
@@ -124,8 +124,11 @@
 }
 /* .hover a */
 .navContainer>nav>ul>li>a:hover{
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-ultratransparente-claro);
+    transition: ease-in 0.3s;
+}
+.navContainer>nav>ul>li>a:not(:hover){
+    transition: ease-out 0.3s;
 }
 .logoContainer,
 .navContainer,

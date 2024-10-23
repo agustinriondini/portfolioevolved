@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var actualver = $('#updateVer').text();
-    var lastUpdate = "public_release_v1.1.1_update_14042024_build#12";
+    var lastUpdate = "public_release_v1.2.0_update_23102024_build#14";
 
     console.log('Valor actual:', actualver);
 

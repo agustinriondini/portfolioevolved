@@ -37,7 +37,7 @@
 #profile > h2, h3,
 #profile > article {
     text-align: center;
-    color: white;
+    color: var(--color-blanco);
 }
 
 #profile > h2 {

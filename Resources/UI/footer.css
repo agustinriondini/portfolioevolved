@@ -22,8 +22,8 @@
     margin: 4rem auto 0 auto;
     opacity: 0;
     animation: fade-in 2.3s ease-out forwards;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top: solid 1px white;
+    background-color: var(--color-transparencia-oscuro);
+    border-top: solid 1px var(--color-blanco);
 }
 
 /* Estilos para los contenedores de los elementos del footer */
@@ -38,102 +38,119 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 /* Estilos para las cajas dentro del footer */
 .footerBoxes {
-    width: 30%;
-    max-width: 300px;
-    min-width: 150px;
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-}
-
-/* Estilos para las listas dentro de las cajas del footer */
-.footerBoxes>ul {
-    display: flex;
-    height: 100%;
-    min-height: 150px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-}
-
-/* Estilos para los elementos de las listas dentro de las cajas del footer */
-.footerBoxes>ul>li {
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-/* Estilos para los enlaces dentro de las listas dentro de las cajas del footer */
-.footerBoxes>ul>li>a {
-    width: 25%;
-    max-width: 2rem;
-    min-width: 2rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    border-radius: 50%;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #fff;
-}
-
-.footerBoxes>ul>li>a:hover {
-    color: goldenrod;
-    transition: ease-in 1s;
-}
-
-.footerBoxes>ul>li>a>img,
-.footerBoxes>ul>li>img {
-    width: 25%;
-    max-width: 2rem;
-    min-width: 2rem;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-/* Estilos para el contenedor de botones */
-.buttonContainer {
     width: 100%;
-    max-width: 300px;
-    min-width: 150px;
-    aspect-ratio: 1/1;
+    max-width: 900px;
+    min-width: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
+    margin: auto;
 }
 
-/* Estilos para los botones */
-.btn {
-    min-width: 140px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+.wrapper {
     display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
     justify-content: center;
-    margin-top: 5px;
 }
 
-.btn:hover {
-    background-color: #01458e;
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.btn:active {
-    cursor: progress;
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #181717;
+    color: #fff;
+}
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+    background: #0078D4;
+    color: #fff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #0077B5;
+    color: #fff;
+}
+.wrapper .bugreport:hover,
+.wrapper .bugreport:hover .tooltip,
+.wrapper .bugreport:hover .tooltip::before {
+    background: #b57000;
+    color: #fff;
 }
 .version {
     width: 100%;
@@ -146,7 +163,7 @@
     align-items: center;
     margin: auto;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-transparencia-oscuro);
 }
 
 .compilacion,
@@ -154,7 +171,7 @@
     display: flex;
     margin: auto;
     font-size: 0.8rem;
-    color: grey;
+    color: var(--color-blanco);
 }
 
 .jarsoft {

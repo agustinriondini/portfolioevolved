@@ -2,6 +2,16 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+:root{
+	--color-transparencia-oscuro: rgba(0, 0, 0, 0.7);
+	--color-trasnparencia-claro: rgba(255, 255, 255, 0.7);
+	--color-ultratransparente-oscuro: rgba(0, 0, 0, 0.35);
+	--color-ultratransparente-claro: rgba(255, 255, 255, 0.35);
+	--color-blanco: #ffff;
+	--color-botones-nothovered: #fb00ff8b;
+	--color-botones-hovered: #fc00ff;
+	--color-negro: black;
+}
 html{
 	background-image: url("../Images/Texturas/back3.jpg");
 	background-repeat: no-repeat;

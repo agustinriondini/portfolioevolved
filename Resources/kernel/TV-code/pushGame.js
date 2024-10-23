@@ -15,7 +15,7 @@ var ledNotif = document.getElementById("ledNotif");
 if (!isTVOn) {
 tvDisplay.innerHTML = '<video id="videoPlayer" src="../Videos/bootanimation.mp4" autoplay></video>';
 ledNotif.style.boxShadow = "0px 0px 10px green";
-tvDisplay.style.boxShadow = "0px  0px 10px #fff";
+tvDisplay.style.boxShadow = "0px  0px 10px var(--color-blanco)";
 isTVOn = true;
 setTimeout(function() {
 tvRebootButton.disabled = false;
@@ -69,7 +69,7 @@ window.playGameOnTv = function(projectId) {
     // Carga el juego en el televisor
     tvDisplay.innerHTML = '<iframe src="' + gameUrl + '" width="100%" height="100%" overflow-x="hidden" overflow-y="hidden" frameborder="0"></iframe>';
     ledNotif.style.boxShadow = "0px 0px 10px green";
-    tvDisplay.style.boxShadow = "0px  0px 10px #fff";
+    tvDisplay.style.boxShadow = "0px  0px 10px var(--color-blanco)";
 };
 });
 

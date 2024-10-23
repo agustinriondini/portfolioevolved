@@ -16,12 +16,12 @@
     height: 2dvh;
     min-height: 30px;
     max-height: 90px;
-    background-color: #000;
+    background-color: var(--color-negro);
     display: flex;
     margin: 4rem auto 0;
     justify-content: space-evenly;
     align-items: center;
-    border: solid 0.1rem white;
+    border: solid 0.1rem var(--color-blanco);
     border-radius: 25px;
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
@@ -30,7 +30,7 @@
     height: 80%;
     aspect-ratio: 1/1;
     display: flex;
-    background-color: white;
+    background-color: var(--color-blanco);
     border-radius: 50%;
     align-items: center;
     margin: auto;
@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 25px;
-    border: solid 5px black;
+    border: solid 5px var(--color-negro);
 }
 .speakerTm{
     display: flex;
@@ -52,10 +52,10 @@
     margin: auto;
 }
 .speakerTag{
-    color: white;
+    color: var(--color-blanco);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: lighter;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px var(--color-negro);
     font-style: italic;
 }
 
@@ -65,7 +65,7 @@
     min-width: 300px;
     max-width: 800px;
     height: 10dvh;
-    min-height: 100px;
+    min-height: 130px;
     max-height: 300px;
     margin: auto;
     display: flex;
@@ -73,10 +73,10 @@
     align-items: center;
     border: solid 0.8rem;
     border-image: url(../Images/Texturas/madera_estante.jpg) 99 repeat;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 100px var(--color-ultratransparente-claro);
     z-index: 0;
     /*luz interna*/
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, var(--color-ultratransparente-claro) 0%, rgba(255, 255, 255, 0) 100%);
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
 }
@@ -97,57 +97,28 @@
     }
 
 }
-
-.arbolito{
+.consola, .arbolito{
     width: 10%;
-    min-width: 90px;
-    max-width: 270px;
-    height: 90%;
-    min-height: 90px;
-    max-height: 270px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 0px;
-    z-index: 0;
-}
-.arbolPic{
-    width: 10%;
-    min-width: 90px;
-    max-width: 270px;
-    height: 90%;
-    min-height: 90px;
-    max-height: 270px;
-    object-fit: contain;
-    filter: brightness(90%);
-    cursor: not-allowed;
-    z-index: 0;
-}
-.consola{
-    width: 10%;
-    min-width: 90px;
-    max-width: 270px;
-    height: 90%;
-    min-height: 90px;
-    max-height: 270px;
+    height: 100%;
+    min-height: 130px;
+    max-height: 300px;
     display: flex;
     justify-content: right;
     align-items: center;
-    margin: auto 0;
-    margin-bottom: 0px;
+    margin: auto;
     z-index: 0;
 }
-.consolaPic{
-    width: 10%;
-    min-width: 90px;
-    max-width: 270px;
-    height: 90%;
-    min-height: 90px;
-    max-height: 270px;
-    object-fit: contain;
+.arbolito{
+    justify-content: left;
+}
+.consolaPic, .arbolPic{
+    width: auto;
+    height: 100%;
+    min-height: 130px;
+    max-height: 300px;
     filter: brightness(90%);
     cursor: not-allowed;
+    margin-bottom: 0;
     z-index: 0;
 }
 .gamesContainer{
@@ -161,27 +132,28 @@
 /*en biblioteca guardado*/
 /* Estilos para el gameBox */
 .gameBox {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: auto;
-    min-width: 30px;
+    background-color: var(--color-transparencia-oscuro);
+    height: 100%;
+    min-height: 130px;
+    max-height: 300px;
+    width: 10%;
+    min-width: 25px;
     max-width: 50px;
-    height: auto;
-    min-height: 90px;
-    max-height: 150px;
     display: flex;
     z-index: 1;
     align-items: center;
     margin: 0;
     justify-content: center;
-    border-right: solid 2px black;
+    border-right: solid 2px var(--color-negro);
 }
 
 .projectOnLibrary{
-    display: flexbox;
+    display: flex;
+    margin-bottom: 0px;
 }
 .projectOnLibraryTitle {
     transform: rotate(-90deg);
-    color: #fff;
+    color: var(--color-blanco);
 
 
 }
@@ -190,21 +162,19 @@
     width: 0;
 
 }
-
-
 .gameBox:hover .projectExpanded, .coverContainer {
     display: flex;
     position: absolute;
     width: 100%;
     min-width: 110px;
     max-width: 220px;
-    height: 90%;
-    background-color: #000;
+    height: 100%;
+    background-color: var(--color-negro);
     align-items: center;
     justify-content: center;
     z-index: 1;
-    min-height: 90px;
-    max-height: 150px;
+    min-height: 130px;
+    max-height: 300px;
     cursor: pointer;
     margin: auto;
     animation: fade-in 1s ease-out forwards;
@@ -253,19 +223,23 @@
     align-items: center;
     margin: auto;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--color-blanco);
     border-radius: 50%;
 }
 .projectLink:hover{
-    background-color: #01458e;
+    background-color: var(--color-botones-hovered);
+    transition: ease-in 0.3s;
+}
+.projectLink:not(:hover){
+    transition: ease-out 0.3s;;
 }
 .projectLink:active{
     cursor: progress;
 }
 .stableBtn, .projectLink{
     padding: 8px 12px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color-botones-nothovered);
+    color: var(--color-blanco);
     text-decoration: none;
     border-radius: 5px;
     display: inline-flex;
@@ -278,7 +252,11 @@
 }
 
 .stableBtn:hover{
-    background-color: #01458e;
+    background-color: var(--color-botones-hovered);
+    transition: ease-in 0.3s;
+}
+.stableBtn:not(:hover){
+    transition: ease-out 0.3s;
 }
 .stableBtn:active{
     cursor: progress;

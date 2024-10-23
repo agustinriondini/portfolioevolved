@@ -37,7 +37,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin: auto;
-background-color: black;
+background-color: var(--color-negro);
 border: none;
 cursor: pointer;
 object-fit: contain;
@@ -72,9 +72,9 @@ width: 33%;
 max-width: 200px;
 aspect-ratio: 2/1;
 margin: auto;
-border: solid 0.1rem white;
+border: solid 0.1rem var(--color-blanco);
 border-radius: 12.5px;
-background-color: rgba(0, 0, 0, 0.4);
+background-color: var(--color-ultratransparente-oscuro);
 }
 
 
@@ -87,11 +87,15 @@ margin: auto;
 aspect-ratio: 1/1;
 cursor: pointer;
 border: none;
-background-color: rgba(255, 255, 255, 0.9);
+background-color: var(--color-ultratransparente-claro);
 }
 
 .tvBtn:hover{
-background-color: greenyellow;
+    background-color: greenyellow;
+    transition:  ease-in 0.3s;
+}
+.tvBtn:not(:hover){
+    transition: ease-out 0.3s;
 }
 
 /*/tv activada- se maximiza/*/

@@ -25,7 +25,7 @@
     animation: fade-in 2.3s ease-out forwards;
 }
 .sectionSubtitle, .xpsubtitle{
-    color: #fff;
+    color: var(--color-blanco);
     text-align: center;
 }
 .formacionContainer{
@@ -39,7 +39,7 @@
     align-items: center;
     border-radius: 12.5px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--color-ultratransparente-claro);
 }
 .collegeCard{
     width: 90%;
@@ -60,7 +60,7 @@
     min-width: 100px;
     max-width: 150px;
     aspect-ratio: 16/9;
-    background-color: #fff;
+    background-color: var(--color-blanco);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@
     rotate: -90deg;
 }
 .collegeData{
-    color: #fff;
+    color: var(--color-blanco);
 }
 .collegeName{
     font-size: 1.3rem;
@@ -132,10 +132,10 @@
     align-items: center;
     border-radius: 12.5px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--color-ultratransparente-claro);
 }
 .jobTitle{
-    color: #fff;
+    color: var(--color-blanco);
     text-align: center;
 }
 .jobSub{
@@ -151,29 +151,29 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color: #fff;
+    color: var(--color-blanco);
     line-height: 1.3rem;
 }
 .joblist>ol{
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--color-blanco);
 }
 .joblist>ol>li{
     display: flex;
-    color: #fff;
+    color: var(--color-blanco);
 }
 .jobLink{
     padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color-botones-nothovered);
+    color: var(--color-blanco);
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
     margin-top: 5px;
 }
 .jobLink:hover{
-    background-color: #01458e;
+    background-color: var(--color-botones-hovered);
 }
 .jobLink:active{
     cursor: progress;
