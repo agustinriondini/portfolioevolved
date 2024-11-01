@@ -133,6 +133,12 @@
   flex-grow: 1;
   margin: auto;
   border-radius: 12.5px;
+  background-color: var(--color-glass);
+}
+
+.officeCard:hover,
+.logro:hover {
+  cursor: pointer;
   background-color: var(--color-ultratransparente-claro);
 }
 .skillIcon, .logroPic{

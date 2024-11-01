@@ -39,7 +39,8 @@
     align-items: center;
     border-radius: 12.5px;
     margin: auto;
-    background-color: var(--color-ultratransparente-claro);
+    background-color: var(--color-glass);
+    backdrop-filter: blur(20px);
 }
 .collegeCard{
     width: 90%;
@@ -74,9 +75,7 @@
 .collegeName{
     font-size: 1.3rem;
 }
-.varios{
-    color: goldenrod;
-}
+
 .collegeInfo{
     font-weight: lighter;
 }
@@ -132,14 +131,15 @@
     align-items: center;
     border-radius: 12.5px;
     margin: auto;
-    background-color: var(--color-ultratransparente-claro);
+    background-color: var(--color-glass);
 }
 .jobTitle{
     color: var(--color-blanco);
     text-align: center;
 }
-.jobSub{
-    color: goldenrod;
+.jobSub, .varios{
+    color: rgb(200, 38, 200);
+    font-weight: bold;
     text-align: center;
 }
 .joblist, .jobFirstData, .jobLastData{

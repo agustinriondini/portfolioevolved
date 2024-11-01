@@ -10,3 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+function pushtodev(){
+    window.location.href = "./Resources/subdirs/projects.html";
+}
+function pushtoit() {
+    window.location.href = "./Resources/subdirs/skills.html#extras";
+}

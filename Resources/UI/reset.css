@@ -7,6 +7,7 @@
 	--color-trasnparencia-claro: rgba(255, 255, 255, 0.7);
 	--color-ultratransparente-oscuro: rgba(0, 0, 0, 0.35);
 	--color-ultratransparente-claro: rgba(255, 255, 255, 0.35);
+	--color-glass: rgba(255, 255, 255, 0.1);
 	--color-blanco: #ffff;
 	--color-botones-nothovered: #fb00ff8b;
 	--color-botones-hovered: #fc00ff;
@@ -23,6 +24,7 @@ html{
 }
 body{
 	width: 100%;
+	min-width: 300px;
 	max-width: 1000px;
 	margin: auto;
 	padding: 0;
@@ -69,4 +71,34 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/*Scrollbar para todo el portfolio*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    border-radius: 12.5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-ultratransparente-oscuro);
+    border-radius: 12.5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-transparencia-oscuro);
+}
+::-webkit-scrollbar-button {
+    width: 5px;
+    height: 5px;
+    background: var(--color-ultratransparente-oscuro);
+}
+::-webkit-scrollbar-button:hover {
+    background: var(--color-transparencia-oscuro);
+}
+:hover{
+	transition: ease-in 0.3s;
+}
+:not(:hover){
+	transition: ease-out 0.3s;
 }
