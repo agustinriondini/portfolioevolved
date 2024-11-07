@@ -80,7 +80,7 @@
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .arbolito, .arbolPic, .consola, .consolaPic{
         display: none;
     }

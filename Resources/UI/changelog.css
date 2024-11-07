@@ -1,0 +1,44 @@
+#changelog{
+    width: 100dvw;
+    min-width: 300px;
+    max-width: 1000px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    height: 100%;
+}
+.changelogtitlewrapper{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    height: 10%;
+    min-height: 40px;
+    max-height: 100px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.changelogtitlewrapper>h2{
+    color: var(--color-blanco);
+}
+.changelocontentwrapper{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    height: 70%;
+    min-height: 200px;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+.changelocontentwrapper:hover{
+    overflow: auto;
+}
+#fetchchangelog{
+    color: var(--color-blanco);
+    line-height: 1.2;
+    display: flex;
+    white-space: pre-wrap;
+}

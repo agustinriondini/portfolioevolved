@@ -8,7 +8,7 @@
     background-color: var(--color-trasparencia-oscuro);
     backdrop-filter: blur(10px);
     display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar el texto y el loader */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -19,12 +19,12 @@
 /* Loader */
 #loader {
     border: 16px solid var(--color-ultratransparente-oscuro);
-    border-top: 16px solid transparent; /* Cambiado a transparente */
+    border-top: 16px solid transparent;
     border-radius: 50%;
     width: 80px;
     height: 80px;
     z-index: 99999;
-    position: relative; /* Para posicionar el pseudo-elemento correctamente */
+    position: relative;
     animation: spin 1s linear infinite;
 }
 
@@ -38,15 +38,15 @@
     height: 100%;
     border-radius: 50%;
     background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
-    clip-path: circle(50% at 50% 50%); /* Mantiene el gradiente circular */
+    clip-path: circle(50% at 50% 50%);
 }
 
 /* Texto de carga */
 #loading-text {
-    margin-top: 10px; /* Espacio entre el loader y el texto */
-    color: white; /* Cambia el color según tu diseño */
-    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
-    text-align: center; /* Centra el texto */
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 /* Rotación */

@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="riondini juan agustin, portfolio riondini">
     <meta name="description" content="portfolio Riondini Juan">
+    <link rel="icon" href="./Resources/Images/Icons/mainIcon.png" type="image/x-icon">
     <title>JAR | Landing</title>
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./Resources/UI/reset.css">
-    <link rel="stylesheet" href="./Resources/UI/changelog.css">
     <link rel="stylesheet" href="./Resources/UI/commandCenter.css">
     <link rel="stylesheet" href="./Resources/UI/profile.css">
     <link rel="stylesheet" href="./Resources/UI/footer.css">
+    <link rel="stylesheet" href="./Resources/UI/loader.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./Resources/kernel/animations.js"></script>
     <script src="./Resources/kernel/version.js"></script>
 </head>
 <body>
+    <script src="./Resources/kernel/loader.js"></script>
     <!-- Menu -->
     <div class="commandCenter">
         <button class="logoContainer" id="toggleMenu">|||</button>
@@ -34,6 +37,10 @@
                 </ul>
             </nav>
         </div>
+    </div>
+    <div id="loader-container">
+        <div id="loader"></div>
+        <div id="loading-text">Cargando perfil</div>
     </div>
     <!-- Sections -->
     <main>
@@ -108,6 +115,7 @@
     <div class="version">
         <span class="compilacion" id="updateVer">Corroborando versión. Espere...</span>
         <h6 class="jarsoft">JARSoft</h6>
+        <a href="./Resources/subdirs/changelog.html" target="_blank" class="jarsoft">Changelog</a>
     </div>
 </footer>
 </html>

@@ -118,8 +118,8 @@
         cursor: pointer;
         background-color: var(--color-ultratransparente-claro);
         transition-property: background-color;
-        transition-duration: 0.5s; /* Cambia la duración de la transición a 0.5 segundos (o el valor que prefieras) */
-        transition-timing-function: ease-in-out; /* Cambia la función de tiempo de la transición para una suavidad adicional */
+        transition-duration: 0.5s; 
+        transition-timing-function: ease-in-out;
     }    
 }
 /* .hover a */

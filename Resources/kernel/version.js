@@ -1,12 +1,9 @@
 $(document).ready(function() {
     var actualver = $('#updateVer').text();
-    var lastUpdate = "public_release_v1.2.1_update_31102024_build#16";
-
-    console.log('Valor actual:', actualver);
+    var lastUpdate = "public_release_v1.2.2_update_06112024_build#17";
 
     if (actualver !== lastUpdate) {
         $('#updateVer').text(lastUpdate);
-        console.log('Valor actualizado a:', lastUpdate);
     }
 });
 
