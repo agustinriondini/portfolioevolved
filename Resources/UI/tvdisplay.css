@@ -111,14 +111,14 @@ border-radius: 50%;
 /*/tv activada- se maximiza/*/
 /*Botonera con rework*/
 #tvPower{
-    background-image: url(/Resources/Images/Icons/powerbtn.png);
+    background-image: url(../Images/Icons/powerbtn.png);
 }
 #tvReboot{
-    background-image: url(/Resources/Images/Icons/restartbtn.png);
+    background-image: url(../Images/Icons/restartbtn.png);
 }
 #tvResize{
-    background-image: url(/Resources/Images/Icons/maximizar.png);
+    background-image: url(../Images/Icons/maximizar.png);
 }
 #tvHome{
-    background-image: url(/Resources/Images/Icons/menubtn.png);
+    background-image: url(../Images/Icons/menubtn.png);
 }

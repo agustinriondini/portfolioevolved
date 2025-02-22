@@ -1,3 +1,8 @@
+## public_release_v1.2.3_update_22022025_build#19
+-[Fixes] Hotfix para obtener los recursos de imagen del menu tv para githubpages.
+-[Update] Readme.md // changelog
+-[Update] #build19
+================================================================================================================================================
 ## public_release_v1.2.3_update_22022025_build#18
 -[New] Se agregaron nuevos iconos al menu del tv.
 -[New] Se agrego una funcion especifica para ordenar alfabeticamente los proyectos en la estanteria.
