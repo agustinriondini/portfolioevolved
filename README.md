@@ -1,3 +1,20 @@
+## public_release_v1.2.3_update_22022025_build#18
+-[New] Se agregaron nuevos iconos al menu del tv.
+-[New] Se agrego una funcion especifica para ordenar alfabeticamente los proyectos en la estanteria.
+-[New] Todas las listas se ordenan automaticamente por orden alfabetico.
+-[New] Se agrego un proyecto nuevo en la seccion projects con un video demo.
+-[New] Se le dio funcionalidad al boton home del tv y redirecciona el contenido al dashboard de github.
+-[Fixes] Se corrigio y mejoro la visualizacion de los controles del tv.
+-[Fixes] Se mejoro la visualizacion de la seccion del perfil. Mejor responsividad.
+-[Fixes] Se corrigio el comportamiento responsivo de los logros y las cartillas de oficio
+-[Fixes] Se mejoro la visualizacion de menu principal
+-[Fixes] coreccion visual de los botones del footer en dispositivos hd+
+-[Update] Se utilizan los colores mas similares a android, git, linux y windows en la seccion de skills.
+-[Update] Se agregaron detalles en las animaciones de la seccion skills.
+-[Update] Actualizacion de version.
+-[Update] Actualizacion del readme.md // changelog
+-[updated_files] 25. Update 22/02/2025
+================================================================================================================================================
 ## public_release_v1.2.1_update_31102024_build#17
 - [Fixes] Corrección en el funcionamiento del loader.
 - [Fixes] Corrección de errores de diseño en moviles y tablets de la seccion proyectos.
@@ -10,7 +27,7 @@
 - [New] Implementacion del registro de cambios. (Fetch readme.md content)
 - [New] Implementacion del loader en todas las secciones.
 ================================================================================================================================================
-## public_release_v1.2.10_update_31102024_build#15
+## public_release_v1.2.1_update_31102024_build#15
 - [Hotfix] Correccion de limites de diseño post update 23102024 en la build 14.
 ================================================================================================================================================
 ## public_release_v1.2.0_update_23102024_build#14

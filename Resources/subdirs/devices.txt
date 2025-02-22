@@ -12,6 +12,7 @@ Lista de dispositivos trabajados
 ☑Motorola G6
 ☑Motorola G7
 ☑Motorola G7 Power
+☑Motorola G24
 ☑Motorola Motoluxe XT-615
 ☑Motorola Power
 ☑Motorola Quench
@@ -19,3 +20,4 @@ Lista de dispositivos trabajados
 ☑Samsung Galaxy Tab
 ☑Skyworth TV (Globe devices)
 ☑SmartKassel tablet
+☑Xiaomi Redmi A3

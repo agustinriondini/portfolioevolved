@@ -69,17 +69,22 @@ left: 50%;
 transform: translate(-50%, -50%);
 display: none;
 width: 33%;
-max-width: 200px;
-aspect-ratio: 2/1;
+min-width: 250px;
+max-width: 300px;
+aspect-ratio: 2/0.75;
 margin: auto;
 border: solid 0.1rem var(--color-blanco);
 border-radius: 12.5px;
-background-color: var(--color-ultratransparente-oscuro);
+background-color: rgba(255, 255, 2550, 0.1);
+-webkit-backdrop-filter: blur(6px);
+backdrop-filter: blur(6px);
 }
 
 
 .tvBtn{
-width: 2rem;
+height: 2.5rem;
+min-height: 30px;
+max-height: 60px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -87,7 +92,12 @@ margin: auto;
 aspect-ratio: 1/1;
 cursor: pointer;
 border: none;
+background-size: 50%;
+background-position: center;
+background-repeat: no-repeat;
 background-color: var(--color-ultratransparente-claro);
+border-radius: 50%;
+
 }
 
 .tvBtn:hover{
@@ -99,4 +109,16 @@ background-color: var(--color-ultratransparente-claro);
 }
 
 /*/tv activada- se maximiza/*/
-
+/*Botonera con rework*/
+#tvPower{
+    background-image: url(/Resources/Images/Icons/powerbtn.png);
+}
+#tvReboot{
+    background-image: url(/Resources/Images/Icons/restartbtn.png);
+}
+#tvResize{
+    background-image: url(/Resources/Images/Icons/maximizar.png);
+}
+#tvHome{
+    background-image: url(/Resources/Images/Icons/menubtn.png);
+}

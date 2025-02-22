@@ -134,7 +134,7 @@
         <div class="techCard" id="git">
             <h3 class="techtitle">GIT</h3>
             <div class="techData" id="git_icon">
-                <ul>
+                <ul class="order">
                     <li>GIT (prompt) basico</li>
                     <li>GitHub (desktop & web)</li>
                 </ul>
@@ -143,7 +143,7 @@
         <div class="techCard" id="android">
             <h3 class="techtitle">Android<a href="../subdirs/devices.txt" target="_blank" download="Devices_list" class="devicesList">Listado dispositivos</a></h3>
             <div class="techData" id="droid_icon">
-                <ul>
+                <ul class="order">
                     <li>Rooting via cmd (fastboot/ADB)</li>
                     <li>Instalacion customROM</li>
                     <li>Restauracion stockROM</li>
@@ -159,7 +159,7 @@
         <div class="techCard" id="windows">
             <h3 class="techtitle">Windows</h3>
             <div class="techData" id="windows_icon">
-                <ul>
+                <ul class="order">
                     <li>Instalacion y configuracion</li>
                     <li>Reparacion</li>
                     <li>Limpieza</li>
@@ -172,7 +172,7 @@
         <div class="techCard" id="linux">
             <h3 class="techtitle">Linux</h3>
             <div class="techData" id="linux_icon">
-                <ul>
+                <ul class="order">
                     <li>Instalcion</li>
                 </ul>
             </div>
@@ -182,7 +182,7 @@
         <div class="officeContainer">
             <div class="officeCard">
                 <h4 class="officeTitle">Office Avanzado</h4>
-                <ul>
+                <ul class="order">
                     <li>Excel</li>
                     <li>Word</li>
                     <li>PowerPoint</li>
@@ -191,13 +191,13 @@
             </div>
             <div class="officeCard">
                 <h4 class="officeTitle">Dataprep</h4>
-                <ul>
+                <ul class="order">
                     <li>Correccion de bases</li>
                 </ul>
             </div>
             <div class="officeCard">
                 <h4 class="officeTitle">SAP Web (SURA)</h4>
-                <ul>
+                <ul class="order">
                     <li>Data entry</li>
                     <li>Facturacion</li>
                     <li>Gestion Tickets</li>
@@ -209,6 +209,7 @@
     </section>
     
     <script src="../kernel/mobilecmdcenter.js"></script>
+    <script src="/Resources/kernel/orderlist.js"></script>
 </body>
 <footer id="allFooter">
     <div class="footerContainer">
@@ -258,7 +259,7 @@
                 window.open(link, '_blank');});});
     </script>
     <div class="version">
-        <span class="compilacion" id="updateVer">Corroborando versión. Espere...</span>
+        <span class="compilacion" id="updateVer">Error al obtener version</span>
         <h6 class="jarsoft">JARSoft</h6>
     </div>
 </footer>

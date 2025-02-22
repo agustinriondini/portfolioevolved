@@ -126,8 +126,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: fit-content;
-    max-width: 800px;
+    min-width: 270px;
+    max-width: 700px
 }
 /*en biblioteca guardado*/
 /* Estilos para el gameBox */
@@ -136,7 +136,7 @@
     height: 100%;
     min-height: 130px;
     max-height: 300px;
-    width: 10%;
+    width: 25%;
     min-width: 25px;
     max-width: 50px;
     display: flex;
@@ -162,13 +162,13 @@
     width: 0;
 
 }
-.gameBox:hover .projectExpanded, .coverContainer {
+.gameBox:hover .projectExpanded, .coverContainer{
     display: flex;
     position: absolute;
     width: 100%;
     min-width: 110px;
     max-width: 220px;
-    height: 100%;
+    height: 100;
     background-color: var(--color-negro);
     align-items: center;
     justify-content: center;
@@ -178,6 +178,13 @@
     cursor: pointer;
     margin: auto;
     animation: fade-in 1s ease-out forwards;
+}
+.gameBox:hover,  .gamesContainer, .coverContainer{
+    height: calc(100% - 5px);   
+}
+.gamesContainer:hover{
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .leftCover,
 .rightCover,

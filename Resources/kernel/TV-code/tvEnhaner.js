@@ -26,5 +26,3 @@ function isHovering(element) {
 return (element.parentElement.querySelector(":hover") === element);
 }
 });
-
-

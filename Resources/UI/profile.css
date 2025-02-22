@@ -10,17 +10,16 @@
     }
 }
 #profile {
-    width: 100dvw;
+    width: 100%;
     min-width: 300px;
     max-width: 1000px;
-    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     justify-content: space-between;
     height: 100%;
-    min-height: 300px;
-    max-height: 500px;
+    min-height: 500px;
+    max-height: 700px;
     opacity: 0;
     margin: auto;
     animation: fade-in 2.3s ease-out forwards;
@@ -31,7 +30,6 @@
     max-width: 300px;
     height: 100%;
     min-height: 300px;
-    max-height: 400px;
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -145,8 +143,8 @@
     min-width: 150px;
     max-width: 650px;
     height: 100%;
-    min-height: 300px;
-    max-height: 400px;
+    min-height: 500px;
+    max-height: 700px;
     overflow-y: auto;
     grid-row: 1;
     grid-column: 2;
