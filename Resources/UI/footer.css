@@ -160,22 +160,40 @@
     height: auto;
     min-height: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin: auto;
+    
     flex-wrap: wrap;
     background-color: var(--color-transparencia-oscuro);
+    
 }
 
-.compilacion,
-.jarsoft {
+.compilacion{
+    width: auto;
+    max-width: fit-content;
+    height: auto;
+    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+.compilacion>span{
     display: flex;
     margin: auto;
     font-size: 0.8rem;
-    color: var(--color-blanco);
-}
-
-.jarsoft {
+    color: grey;
+    text-align: left;
     font-size: 1rem;
-    font-style: italic;
+}
+.jarsoft{
+    height: 100%;
+    width: auto;
+    min-width: fit-content;
+    color: var(--color-blanco);
+    font-size: 1rem;
+    text-decoration: none;
+}
+.jarsoft:hover{
+    background-color: var(--color-botones-hovered);
+    transition: ease-in-out 0.3s;
+
 }

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function fetchChangelogDataContent() {
-    fetch('../../README.md')
+    fetch('../../../README.md')
         .then(response => response.text())
         .then(data => {
             document.getElementById('fetchchangelog').textContent = data;

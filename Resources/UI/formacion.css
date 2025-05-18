@@ -9,6 +9,17 @@
     }
 }
 
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 #formacion{
     width: 100%;
     min-width: 300px;
@@ -19,9 +30,9 @@
     flex-wrap: wrap;
     margin: 1rem auto;
     flex-direction: column;
-    gap: 5px;
+    gap: 1rem;
     justify-content: space-evenly;
-    opacity: 0; 
+    
     animation: fade-in 2.3s ease-out forwards;
 }
 .sectionSubtitle, .xpsubtitle{
@@ -33,41 +44,106 @@
     min-width: 300px;
     max-width: 900px;
     height: auto;
-    min-height: fit-content;
+    min-height: 300px;
+    max-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12.5px;
     margin: auto;
     background-color: var(--color-glass);
-    backdrop-filter: blur(20px);
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    z-index: 0;
+    overflow: hidden;
+    background-clip: padding-box;
 }
+.formacionContainer:hover, .jobs:hover{
+    scale: 1.05;
+}
+.formacionContainer::before, .jobs:before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(270deg, hsla(181, 100%, 44%, 0.6), hsla(299, 100%, 50%, 0.6), hsla(181, 100%, 44%, 0.6));
+    background-size: 600% 600%;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    animation: borderFlow 10s linear infinite;
+}
+
+.formacionContainer:hover::before, .jobs:hover::before {
+    opacity: 1;
+}
+
+
 .collegeCard{
-    width: 90%;
+    height: 100%;
     min-width: 300px;
     max-width: 900px;
-    height: auto;
-    min-height: fit-content;
-    margin: 1rem auto;
+    width: 100%;
+    min-height: 300px;
+    max-height: 400px;
     display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+.collegeData{
+    width: 75%;
+    min-width: 200px;
+    max-width: 700px;
+    height: 100%;
+    min-height: 300px;
+    max-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
     line-height: 1.5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 12.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 12.5px;
+
 
 }
 .collegePic{
+    width: 25%;
+    min-width: 100px;
+    max-width: 200px;
+    height: 100%;
+    min-height: 300px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12.5px;
+    border-bottom-right-radius: 0;
+    background-color: whitesmoke;
+}
+#UTN_pic, #Alura_pic{
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12.5px;
+    border-bottom-right-radius: 0;
     width: 100%;
     min-width: 100px;
-    max-width: 150px;
-    aspect-ratio: 16/9;
-    background-color: var(--color-blanco);
+    max-width: 200px;
+    height: 100%;
+    min-height: 300px;
+    max-height: 400px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12.5px;
-    object-fit: contain;
-    rotate: -90deg;
+    margin: auto;
 }
 .collegeData{
     color: var(--color-blanco);
@@ -77,6 +153,7 @@
 }
 
 .collegeInfo{
+    width: 90%;
     font-weight: lighter;
 }
 /*xp*/
@@ -89,7 +166,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 1rem auto;
-    gap: 5px;
+    gap: 1rem;
     justify-content: space-evenly;
     opacity: 0; 
     animation: fade-in 2.3s ease-out forwards;
@@ -138,7 +215,7 @@
     text-align: center;
 }
 .jobSub, .varios{
-    color: rgb(200, 38, 200);
+    color: var(--color-blanco);
     font-weight: bold;
     text-align: center;
 }

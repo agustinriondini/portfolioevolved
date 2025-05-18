@@ -1,3 +1,18 @@
+## public_release_v1.2.4_update_18052025_build#20
+-[New] Se reemplazo la metodologia MPA (Multi page application) a SPA (Single page application).
+-[Update] Refacorizacion del proyecto para adaptarlo a SPA, secciones dinamicas.
+-[Update] Actualizacion de rutas y directorios en todos los archivos.
+-[Update] Actualizacion de version y changelog, build#20 update 20/04/2025.
+-[Update] Actualizada la dependencia version.js.
+-[Update] Actualizada UI de la seccion formacion.
+-[Update] Actualizadas imagenes de instituciones.
+-[Fixes] Correccion de errores al momento de cargar dependencias js.
+-[Fixes] Correccion en el acceso al portal aluracursos.
+-[Fixes] Correcciones de errores generales y mejoras de rendimiento.
+-[Delete] Se eliminaron rutas formacion.html, proyectos.html y skills.html.
+
+
+================================================================================================================================================
 ## public_release_v1.2.3_update_22022025_build#19
 -[Fixes] Hotfix para obtener los recursos de imagen del menu tv para githubpages.
 -[Update] Readme.md // changelog
@@ -158,7 +173,7 @@
 - [Update]se mejoro la visualizacion del background-image
 - [Update]actualizado el registro de cambios en readme.md
 - [Update]actualizada la version del portfolio con la nueva caracteristica version.js
-- [Delete]se desactivo en todos los archivos .html el logoContainer del commandCenter (podria eliminarse a futuro, aun no esta decidido y se se utilizara en base al diseño inicial)
+- [Delete]se desactivo en todos los archivos .html el menuButtonContainer del commandCenter (podria eliminarse a futuro, aun no esta decidido y se se utilizara en base al diseño inicial)
 - [Delete]se elimino el archivo profile.pic
 
 ================================================================================================================================================

@@ -24,6 +24,13 @@
     margin: auto;
     animation: fade-in 2.3s ease-out forwards;
 }
+.portfolio_model_release{
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--color-blanco);
+    font-size: 1rem;
+    text-indent: 1rem;
+}
 .idcontainer{
     width: 70%;
     min-width: 150px;
@@ -84,7 +91,7 @@
     align-items: center;
     object-fit: contain;
     margin: auto;
-    border: solid 0.1rem var(--color-ultratransparente-claro);
+    border: solid 0.1rem var(--color-blanco);
     background-color: var(--color-ultratransparente-oscuro)
 }
 .idsubcontainer{
@@ -110,8 +117,9 @@
     cursor: pointer;
 }
 .idbuttons:hover{
-    background-color: var(--color-ultratransparente-claro);
-    transition: ease-in 0.3s;
+    background-color: var(--color-botones-hovered);
+    scale: 1.05;
+    transition: ease-in-out 0.3s;
 }
 .idbuttons:not(:hover){
     transition: ease-out 0.3s;

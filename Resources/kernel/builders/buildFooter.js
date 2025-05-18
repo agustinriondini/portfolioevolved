@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="riondini juan agustin, portfolio riondini">
-    <meta name="description" content="portfolio Riondini Juan">
-    <link rel="icon" href="../Images/Icons/mainIcon.png" type="image/x-icon">
-    <!--Style-->
-    <link rel="stylesheet" href="../UI/reset.css">
-    <link rel="stylesheet" href="../UI/loader.css">
-    <link rel="stylesheet" href="../UI/changelog.css">
-    <link rel="stylesheet" href="../UI/commandCenter.css">
-    <link rel="stylesheet" href="../UI/footer.css">
-    <!--Code-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="../kernel/chengelog.js"></script>
-    <script src="../kernel/version.js"></script>
-    <script src="../kernel/mobilecmdcenter.js"></script>
-    <title>JAR | Changelog</title>
-</head>
-<body>
-    <script src="../kernel/loader.js"></script>
-    <!--Menu-->
-    <div class="commandCenter">
-        <button class="logoContainer" id="toggleMenu">|||</button><!--sera usado como menu toggle-->
-        <div class="navContainer" id="navContainer">
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Perfil</a></li>
-                    <li><a href="../subdirs/projects.html">Proyectos</a></li>
-                    <li><a href="./skills.html">Habilidades</a></li>
-                    <li><a href="../subdirs/formacion.html">Formacion</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <main id="changelog">
-        <div id="loader-container">
-            <div id="loader"></div>
-            <div id="loading-text">Obteniendo changelog...</div>
-        </div>
-        <div class="changelogtitlewrapper"><h2 class="changelogtitlr">Registro de cambios</h2></div>
-        <div class="changelocontentwrapper"><span id="fetchchangelog">Fetching data...</span></div>
-    </main>
-</body>
-<footer id="allFooter">
+export const buildFooter = `
     <div class="footerContainer">
         <div class="footerBoxes">
             <ul class="wrapper">
@@ -73,7 +25,7 @@
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2 0h12a1 1 0 0 1 1 1v.5l-7 4.5-7-4.5V5a1 1 0 0 1 1-1zm0 1.5v3l7 4.5 7-4.5v-3H2z"/>
                     </svg>
                 </li>
-                <li class="icon linkedin" data-link="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/"">
+                <li class="icon linkedin" data-link="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/">
                     <span class="tooltip">LinkedIn</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M22.225 0h-20.45C.996 0 0 .996 0 2.225v19.55C0 23.004.996 24 2.225 24h20.55C23.004 24 24 23.004 24 22.225v-19.55C24 .996 23.004 0 22.225 0zM7.1 20.452H4.047V9.001h3.053v11.451zm-1.526-13.093c-.974 0-1.664-.662-1.664-1.493 0-.842.7-1.493 1.694-1.493.993 0 1.664.651 1.67 1.493 0 .831-.677 1.493-1.672 1.493zm14.878 13.093h-3.053v-5.579c0-1.35-.025-3.085-1.885-3.085-1.885 0-2.174 1.471-2.174 3.004v5.66h-3.053V9.001h2.93v1.55h.043c.41-.779 1.417-1.597 2.926-1.597 3.132 0 3.709 2.061 3.709 4.742v6.756z"/>
@@ -88,14 +40,10 @@
             </ul>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.wrapper .icon').forEach(item => {
-            item.addEventListener('click', () => {
-                const link = item.getAttribute('data-link');
-                window.open(link, '_blank');});});
-    </script>
     <div class="version">
-        <span class="compilacion" id="updateVer">Error al obtener version</span>
-        <h6 class="jarsoft">JARSoft</h6>
+        <div class="compilacion"><span id="release" title="Clase de publicacion"></span><span id="updateVer" title="Numero de version">Error al obtener version</span><span id="release_date" title="Fecha de publicacion"></span><span id="build" title="Compilacion N°"></span></div>
+        <a href="./Resources/kernel/subdirs/changelog.html" target="_blank" class="jarsoft" title="Link al historial de cambios">Historial de cambios</a>
     </div>
-</footer>
+    
+
+`;

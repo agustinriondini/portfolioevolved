@@ -132,7 +132,7 @@
 .navContainer>nav>ul>li>a:not(:hover){
     transition: ease-out 0.3s;
 }
-.logoContainer,
+.menuButtonContainer,
 .navContainer,
 .navContainer nav ul li a {
     opacity: 0;
@@ -152,11 +152,11 @@
     }
 }
 
-.commandCenter, .logoContainer, .navContainer, .navContainer nav ul li a {
+.commandCenter, .menuButtonContainer, .navContainer, .navContainer nav ul li a {
     opacity: 0; 
 }
 .commandCenter,
-.logoContainer,
+.menuButtonContainer,
 .navContainer,
 .navContainer nav ul li:nth-child(1) a,
 .navContainer nav ul li:nth-child(2) a,
