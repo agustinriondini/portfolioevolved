@@ -10,9 +10,9 @@ $(document).ready(function() {
     
     //set nuevos valores
     var release = "public_release_";
-    var actualver = "v1.3.1_";
+    var actualver = "v1.3.2_";
     var lastUpdate = "update_25032026_";
-    var buildnumber = "build#21";
+    var buildnumber = "build#22";
 
     if (actualver !== lastUpdate) {
         $('#release').text(release);

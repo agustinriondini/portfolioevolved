@@ -1,4 +1,8 @@
 ================================================================================================================================================
+## public_release_v1.3.1_update_25032026_build#22 HOTFIX
+-[Fixes] Correccion de comportamiento menu en modo responsive. (Luego de cambios visuales, el boton no abria/cerraba el menu)
+-[Update] Actualizada version y build22
+================================================================================================================================================
 ## public_release_v1.3.1_update_25032026_build#21 UI-bundle_update
 -[Update] Cambios y mejoras visuales en el diseño general del portfolio.
 -[Update] Nueva profile pic.
