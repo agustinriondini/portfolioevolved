@@ -1,13 +1,22 @@
-/* Animación de fundido */
+/* Animación de fundido moderna */
 @keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Estilos generales */
@@ -15,192 +24,254 @@
 .allProjects, 
 .projectContainer, 
 .projectContainer.active {
-    width: 90%;
-    min-width: 300px;
-    margin: auto;
+  width: 90%;
+  min-width: 300px;
+  margin: auto;
 }
 
 /* Estilos responsivos */
 @media (max-width: 500px) {
-    #projects, 
-    .allProjects, 
-    .projectContainer, 
-    .projectContainer.active {
-        max-width: 500px;
-    }
+  #projects, 
+  .allProjects, 
+  .projectContainer, 
+  .projectContainer.active {
+    max-width: 500px;
+  }
 }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
-    #projects, 
-    .allProjects, 
-    .projectContainer, 
-    .projectContainer.active {
-        width: 90vw;
-        max-width: 668px;
-    }
+  #projects, 
+  .allProjects, 
+  .projectContainer, 
+  .projectContainer.active {
+    width: 90vw;
+    max-width: 668px;
+  }
 }
 
-/* Estilos del contenedor principal */
+/* Contenedor principal de proyectos */
 #projects {
-    text-align: center;
-    opacity: 0;
-    animation: fade-in 2.3s ease-out forwards;
+  text-align: center;
+  opacity: 0;
+  animation: fade-in 2.3s ease-out forwards;
 }
 
-/* Estilos del grid de proyectos */
+/* Grid de proyectos */
 .allProjects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
 }
 
-/* Estilos del contenedor de proyecto */
+/* Contenedor de proyecto */
 .projectContainer {
-    position: relative;
-    overflow: hidden;
-    display: none;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  border-radius: var(--radius-lg);
+  background: var(--color-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all var(--transition-base);
 }
 
-/* Estilos del proyecto activo */
+.projectContainer:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Proyecto activo */
 .projectContainer.active {
-    width: 100%;
-    max-width: 1000px;
-    aspect-ratio: 16/9;
-    max-height: 300px;
-    display: grid;
-    grid-template-columns: 1fr;
-    box-shadow: 0 0 10px var(--color-ultratransparente-claro);
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16/9;
+  max-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
 }
 
-/* Estilos de la imagen del proyecto */
+/* Contenedor de imagen */
 .imgContainer {
-    position: relative;
-    overflow: hidden;
-    max-height: 300px;
+  position: relative;
+  overflow: hidden;
+  max-height: 300px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .imgContainer > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all var(--transition-base);
 }
 
 .imgContainer:hover img {
-    filter: brightness(20%);
+  filter: brightness(30%);
+  transform: scale(1.05);
 }
 
-/* Estilos de la información del proyecto */
+/* Información del proyecto */
 .projectInfo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-blanco);
-    opacity: 0;
-    transition: opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-blanco);
+  opacity: 0;
+  transition: all var(--transition-base);
+  padding: var(--spacing-lg);
+  text-align: center;
 }
 
 .projectContainer:hover .projectInfo {
-    opacity: 1;
-    cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
 }
 
-/* Estilos del botón de siguiente proyecto */
+.projectInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-secondary);
+}
+
+.projectInfo p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Botón de siguiente proyecto */
 .nextButton {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    font-size: 24px;
-    background: none;
-    color: var(--color-blanco);
-    cursor: pointer;
-    border: none;
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-md);
+  font-size: 1.5rem;
+  background: var(--color-glass);
+  color: var(--color-blanco);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: all var(--transition-base);
 }
 
 .nextButton:hover {
-    color: violet;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-blanco);
 }
 
 .projectContainer:hover .nextButton {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Estilos del botón de energía */
+/* Contenedor del botón de energía */
 .powerBtnContainer {
-    width: 90%;
-    min-width: 300px;
-    max-width: 900px;
-    height: 20px;
-    align-items: center;
-    margin: -1.2rem auto;
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    background-color: transparent;
+  width: 90%;
+  min-width: 300px;
+  max-width: 900px;
+  height: 30px;
+  align-items: center;
+  margin: -1rem auto;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  background-color: transparent;
 }
 
 #powerbtn {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  transition: all var(--transition-base);
 }
 
 .powerBtnImg {
-    height: 1rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: lightskyblue;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  animation: pulse 2s ease-in-out infinite;
 }
 
-.powerBtnImg:hover {
-    animation: pulse 1s infinite;
-    background-color: goldenrod;
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+  }
 }
 
-/* Estilos de otros elementos */
+#powerbtn:hover .powerBtnImg {
+  animation: pulse 0.5s ease-in-out infinite;
+  background: var(--color-secondary);
+}
+
+/* Otros elementos */
 .projectContainer.hidden {
-    display: none;
+  display: none;
 }
 
 .sectionSubtitle {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 10px auto;
-    color: var(--color-blanco);
+  text-align: center;
+  text-transform: uppercase;
+  margin: var(--spacing-lg) auto;
+  color: var(--color-blanco);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.sectionSubtitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  margin: var(--spacing-sm) auto;
+  border-radius: var(--radius-full);
 }
 
 .projectContainer.fade-in {
-    animation: fade-in 1s ease-out;
+  animation: fade-in 1s ease-out;
 }
 
 .displayPortContainer {
-    width: 100%;
-    min-width: 300px;
-    max-width: 1000px;
-    height: auto;
-    min-height: fit-content;
-    max-height: max-content;
-    display: flex;
-    margin: auto;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
+  height: auto;
+  min-height: fit-content;
+  max-height: max-content;
+  display: flex;
+  margin: auto;
 }
+

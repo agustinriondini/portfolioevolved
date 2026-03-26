@@ -1,3 +1,12 @@
+================================================================================================================================================
+## public_release_v1.3.1_update_25032026_build#21 UI-bundle_update
+-[Update] Cambios y mejoras visuales en el diseño general del portfolio.
+-[Update] Nueva profile pic.
+-[Update] Actualizacion de version y changelog, build#21 update 25/03/2026.
+-[Fixes] Correccion de errores en visualizacion responsiva.
+-[Fixes] Cambios en funcones de control de proyectos y ejecucion en tv.
+================================================================================================================================================
+
 ## public_release_v1.2.4_update_18052025_build#20
 -[New] Se reemplazo la metodologia MPA (Multi page application) a SPA (Single page application).
 -[Update] Refacorizacion del proyecto para adaptarlo a SPA, secciones dinamicas.

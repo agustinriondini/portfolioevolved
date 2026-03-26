@@ -1,168 +1,256 @@
-.commandCenter{
-    width: 100dvw;
-    min-width: 300px;
-    max-width: 1000px;
-    height: 10dvh;
-    min-height: 50px;
-    max-height: 100px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    flex-wrap: wrap;
-    backdrop-filter: blur(5px);
-    background-color: var(--color-transparencia-oscuro);
-    border-bottom: solid 1px var(--color-blanco);
+/* Animación de aparición */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.navContainer{
-    width: 80%;
-    min-width: 300px;
-    max-width: 800px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-}
-.navContainer>nav{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
 
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 300px;
+    opacity: 1;
+  }
 }
-.navContainer>nav>ul{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: auto;
+
+/* Command Center - Menú principal */
+.commandCenter {
+  width: 100dvw;
+  min-width: 300px;
+  max-width: 1000px;
+  height: 10dvh;
+  min-height: 60px;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  backdrop-filter: blur(15px);
+  background: var(--color-transparencia-medio);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.navContainer>nav>ul>li{
-    width: 50%;
-    min-width: 150px;
-    max-width: 500px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
-    gap: 5px;
+
+.navContainer {
+  width: 80%;
+  min-width: 300px;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
 }
-.navContainer>nav>ul>li>a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-decoration: none;
-    color: var(--color-blanco);
+
+.navContainer > nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
-@media (min-width: 768px) {
-    #toggleMenu{
-        display: none;
-    }
+
+.navContainer > nav > ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
 }
-@media (max-width: 768px) {
-    .commandCenter{
-        max-width: 768px;
-        height: auto;
-        max-height: 300px;
-    }
-    .navContainer{
-        display: none;
-        flex-direction: column;
-        max-width: 768px;
-        height: 30dvh;
-        max-height: 300px;
-        transition: max-height 1s ease-in; 
-        overflow: hidden;
-        
-    }
-    .navContainer>nav{
-        height: 100%;
-        display: flex;
-        max-width: 768px;
-        justify-content: center;
-        align-items: center;
-    }
-    .navContainer>nav>ul{
-        flex-direction: column;
-        max-width: 768px;
-        height: 100%;
-    }
-    .navContainer>nav>ul>li{
-        height: 100%;
-    }
-    .navContainer>nav>ul>li>a{
-        height: 100%;
-        justify-content: space-around;       
-    }
-    #toggleMenu{
-        height: 100%;
-        min-height: 50px;
-        max-height: 50px;
-        aspect-ratio: 1/1;
-        display: flex;
-        position: fixed;
-        margin: auto;
-        text-align: center;
-        rotate: 90deg;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        background-color: transparent;
-        color: var(--color-blanco);
-        font-weight: bolder;
-    }
-    #toggleMenu:hover {
-        cursor: pointer;
-        background-color: var(--color-ultratransparente-claro);
-        transition-property: background-color;
-        transition-duration: 0.5s; 
-        transition-timing-function: ease-in-out;
-    }    
+
+.navContainer > nav > ul > li {
+  width: 50%;
+  min-width: 150px;
+  max-width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  gap: var(--spacing-xs);
 }
-/* .hover a */
-.navContainer>nav>ul>li>a:hover{
-    background-color: var(--color-ultratransparente-claro);
-    transition: ease-in 0.3s;
+
+.navContainer > nav > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-decoration: none;
+  color: var(--color-gris-claro);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all var(--transition-base);
+  position: relative;
 }
-.navContainer>nav>ul>li>a:not(:hover){
-    transition: ease-out 0.3s;
+
+.navContainer > nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: all var(--transition-base);
+  transform: translateX(-50%);
 }
+
+.navContainer > nav > ul > li > a:hover::after {
+  width: 80%;
+}
+
+.navContainer > nav > ul > li > a:hover {
+  color: var(--color-blanco);
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.navContainer > nav > ul > li > a:active {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+/* Botón de menú móvil */
 .menuButtonContainer,
 .navContainer,
 .navContainer nav ul li a {
-    opacity: 0;
+  opacity: 0;
 }
 
-
-/*animaciones*/
-/* Define la animación */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.menuButtonContainer {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
-.commandCenter, .menuButtonContainer, .navContainer, .navContainer nav ul li a {
-    opacity: 0; 
+.navContainer {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.4s;
 }
-.commandCenter,
-.menuButtonContainer,
-.navContainer,
-.navContainer nav ul li:nth-child(1) a,
-.navContainer nav ul li:nth-child(2) a,
-.navContainer nav ul li:nth-child(3) a,
-.navContainer nav ul li:nth-child(4) a,
-.navContainer nav ul li:nth-child(5) a {
-    animation: aparecer 1s ease-out;
-    opacity: 1;
+
+.navContainer nav ul li:nth-child(1) a {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
+
+.navContainer nav ul li:nth-child(2) a {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.navContainer nav ul li:nth-child(3) a {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.navContainer nav ul li:nth-child(4) a {
+  animation: aparecer 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* Desktop - Ocultar botón toggle */
+@media (min-width: 769px) {
+  #toggleMenu {
+    display: none;
+  }
+}
+
+/* Mobile - Mostrar botón toggle y menú collapsible */
+@media (max-width: 768px) {
+  .commandCenter {
+    max-width: 768px;
+    height: auto;
+    max-height: 60px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .navContainer {
+    display: none;
+    flex-direction: column;
+    max-width: 768px;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background: var(--color-transparencia-oscuro);
+  }
+  
+  .navContainer.active {
+    display: flex;
+    max-height: 300px;
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+  .navContainer > nav {
+    height: 100%;
+    display: flex;
+    max-width: 768px;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+  }
+  
+  .navContainer > nav > ul {
+    flex-direction: column;
+    max-width: 768px;
+    height: 100%;
+  }
+  
+  .navContainer > nav > ul > li {
+    height: 50px;
+    width: 100%;
+  }
+  
+  .navContainer > nav > ul > li > a {
+    height: 100%;
+    justify-content: flex-start;
+    padding-left: var(--spacing-lg);
+  }
+  
+  #toggleMenu {
+    height: 100%;
+    min-height: 50px;
+    max-height: 60px;
+    aspect-ratio: 1/1;
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    margin: auto;
+    text-align: center;
+    rotate: 0deg;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: var(--color-gris-claro);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 1001;
+  }
+  
+  #toggleMenu:hover {
+    color: var(--color-primary);
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-md);
+  }
+  
+  #toggleMenu.active {
+    rotate: 90deg;
+  }
+}
+

@@ -24,8 +24,7 @@
 
         if (!isTVOn) {
             tvDisplay.innerHTML = '<video id="videoPlayer" src="./Resources/Videos/bootanimation.mp4" autoplay></video>';
-            ledNotif.style.boxShadow = "0px 0px 10px green";
-            tvDisplay.style.boxShadow = "0px  0px 10px var(--color-blanco)";
+            tvDisplay.classList.add('tv-on');
             isTVOn = true;
 
             setTimeout(function () {
@@ -41,8 +40,7 @@
 
         } else {
             tvDisplay.innerHTML = '';
-            ledNotif.style.boxShadow = "0px 0px 10px red";
-            tvDisplay.style.boxShadow = '';
+            tvDisplay.classList.remove('tv-on');
             tvDisplay.style.backgroundImage = '';
             isTVOn = false;
         }
@@ -52,18 +50,18 @@
         var tvDisplay = document.getElementById("tvDisplay");
         tvDisplay.style.backgroundImage = '';
         tvDisplay.innerHTML = '<iframe src="https://github.com/agustinriondini" width="100%" height="100%" frameborder="0"></iframe>';
+        tvDisplay.classList.add('tv-on');
     }
 
     function rebootTV() {
         var tvDisplay = document.getElementById("tvDisplay");
+        tvDisplay.classList.remove('tv-on');
         tvDisplay.style.backgroundImage = '';
         tvDisplay.innerHTML = "<video autoplay width='100%' height='100%' src='./Resources/Videos/rebootLoader.mp4' type='video/mp4'></video>";
 
         setTimeout(function () {
             tvDisplay.innerHTML = '';
-            var ledNotif = document.getElementById("ledNotif");
-            ledNotif.style.boxShadow = "0px 0px 10px red";
-            tvDisplay.style.boxShadow = '';
+            tvDisplay.classList.remove('tv-on');
             isTVOn = false;
 
             setTimeout(function () {
@@ -77,7 +75,6 @@
     // Exponer funciones globales
     window.playGameOnTv = function (projectId) {
         var tvDisplay = document.getElementById("tvDisplay");
-        var ledNotif = document.getElementById("ledNotif");
 
         var gameUrl = "https://agustinriondini.github.io/" + projectId + "/";
 
@@ -87,16 +84,13 @@
         }
 
         tvDisplay.innerHTML = '<iframe src="' + gameUrl + '" width="100%" height="100%" frameborder="0"></iframe>';
-        ledNotif.style.boxShadow = "0px 0px 10px green";
-        tvDisplay.style.boxShadow = "0px  0px 10px var(--color-blanco)";
+        tvDisplay.classList.add('tv-on');
     };
 
     window.playdemovid = function () {
         var tvDisplay = document.getElementById("tvDisplay");
-        var ledNotif = document.getElementById("ledNotif");
         alert("Proyecto en fase de desarrollo, verás un video demo de algunas características");
         tvDisplay.innerHTML = '<video id="videoPlayer" src="./Resources/Videos/video_demo_penguinSAS.mp4" autoplay></video>';
-        ledNotif.style.boxShadow = "0px 0px 10px green";
-        tvDisplay.style.boxShadow = "0px  0px 10px var(--color-blanco)";
+        tvDisplay.classList.add('tv-on');
     };
 })();

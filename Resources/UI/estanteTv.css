@@ -1,270 +1,363 @@
+/* Animaciones modernas */
 @keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/*barra sonido*/
-.soundbarContainer{
-    width: 50%;
-    min-width: 150px;
-    max-width: 500px;
-    height: 2dvh;
-    min-height: 30px;
-    max-height: 90px;
-    background-color: var(--color-negro);
-    display: flex;
-    margin: 4rem auto 0;
-    justify-content: space-evenly;
-    align-items: center;
-    border: solid 0.1rem var(--color-blanco);
-    border-radius: 25px;
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
-}
-.speaker{
-    height: 80%;
-    aspect-ratio: 1/1;
-    display: flex;
-    background-color: var(--color-blanco);
-    border-radius: 50%;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-}
-.speakerCore{
-    height: 0.5rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    border: solid 5px var(--color-negro);
-}
-.speakerTm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-.speakerTag{
-    color: var(--color-blanco);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: lighter;
-    text-shadow: 2px 2px var(--color-negro);
-    font-style: italic;
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/*decoracion estante*/
-.libraryProjects{
-    width: 80%;
-    min-width: 300px;
-    max-width: 800px;
-    height: 10dvh;
-    min-height: 130px;
-    max-height: 300px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 0.8rem;
-    border-image: url(../Images/Texturas/madera_estante.jpg) 99 repeat;
-    box-shadow: 0 0 100px var(--color-ultratransparente-claro);
-    z-index: 0;
-    /*luz interna*/
-    background: linear-gradient(to bottom, var(--color-ultratransparente-claro) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0; 
-    animation: fade-in 2.3s ease-out forwards;
+/* Soundbar moderna */
+.soundbarContainer {
+  width: 50%;
+  min-width: 180px;
+  max-width: 500px;
+  height: 2.5dvh;
+  min-height: 35px;
+  max-height: 80px;
+  background: var(--gradient-dark);
+  display: flex;
+  margin: var(--spacing-2xl) auto 0;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-xl);
+  opacity: 0;
+  animation: fade-in 2.3s ease-out forwards;
+  backdrop-filter: blur(10px);
 }
-@media (max-width: 700px) {
-    .arbolito, .arbolPic, .consola, .consolaPic{
-        display: none;
-    }
-    .libraryProjects, .gamesContainer{
-        width: 90dvw;
-        max-width: 400px;
-    }
 
+.speaker {
+  height: 70%;
+  aspect-ratio: 1/1;
+  display: flex;
+  background: var(--color-glass);
+  border-radius: 50%;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
-@media screen and (min-width: 501px) and (max-width: 768px) {
-    .libraryProjects, .gamesContainer{
-        width: 90dvw;
-        max-width: 668px;
-    }
 
+.speakerCore {
+  height: 0.5rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-primary);
+  background: transparent;
 }
-.consola, .arbolito{
-    width: 10%;
-    height: 100%;
-    min-height: 130px;
-    max-height: 300px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin: auto;
-    z-index: 0;
+
+.speakerTm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
-.arbolito{
-    justify-content: left;
+
+.speakerTag {
+  color: var(--color-gris-claro);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400;
+  text-shadow: 1px 1px var(--color-negro);
+  font-style: italic;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
 }
-.consolaPic, .arbolPic{
-    width: auto;
-    height: 100%;
-    min-height: 130px;
-    max-height: 300px;
-    filter: brightness(90%);
-    cursor: not-allowed;
-    margin-bottom: 0;
-    z-index: 0;
+
+/* Estante de proyectos */
+.libraryProjects {
+  width: 80%;
+  min-width: 320px;
+  max-width: 800px;
+  height: 12dvh;
+  min-height: 150px;
+  max-height: 280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.6rem;
+  border-image: url(../Images/Texturas/madera_estante.jpg) 99 repeat;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  opacity: 0;
+  animation: fade-in 2.3s ease-out forwards;
+  transition: all var(--transition-base);
 }
-.gamesContainer{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 270px;
-    max-width: 700px
+
+.libraryProjects:hover {
+  box-shadow: 0 0 50px rgba(99, 102, 241, 0.5);
 }
-/*en biblioteca guardado*/
-/* Estilos para el gameBox */
+
+/* Decoraciones de la estantería */
+.consola,
+.arbolito {
+  width: 10%;
+  height: 100%;
+  min-height: 130px;
+  max-height: 280px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: auto;
+  z-index: 0;
+}
+
+.arbolito {
+  justify-content: left;
+}
+
+.consolaPic,
+.arbolPic {
+  width: auto;
+  height: 100%;
+  min-height: 130px;
+  max-height: 280px;
+  filter: brightness(90%);
+  cursor: not-allowed;
+  margin-bottom: 0;
+  z-index: 0;
+  object-fit: contain;
+  transition: all var(--transition-base);
+}
+
+.consolaPic:hover,
+.arbolPic:hover {
+  filter: brightness(100%);
+  transform: scale(1.02);
+}
+
+/* Contenedor de juegos/proyectos */
+.gamesContainer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  max-width: 700px;
+  gap: var(--spacing-xs);
+}
+
+/* Cajas de proyectos en la estantería */
 .gameBox {
-    background-color: var(--color-transparencia-oscuro);
-    height: 100%;
-    min-height: 130px;
-    max-height: 300px;
-    width: 25%;
-    min-width: 25px;
-    max-width: 50px;
-    display: flex;
-    z-index: 1;
-    align-items: center;
-    margin: 0;
-    justify-content: center;
-    border-right: solid 2px var(--color-negro);
+  background: var(--color-transparencia-medio);
+  height: 100%;
+  min-height: 130px;
+  max-height: 280px;
+  width: 25%;
+  min-width: 30px;
+  max-width: 60px;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+  border-right: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all var(--transition-base);
 }
 
-.projectOnLibrary{
-    display: flex;
-    margin-bottom: 0px;
+.gameBox:last-child {
+  border-right: none;
 }
+
+.gameBox:hover {
+  background: var(--color-transparencia-oscuro);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.projectOnLibrary {
+  display: flex;
+  margin-bottom: 0;
+}
+
 .projectOnLibraryTitle {
-    transform: rotate(-90deg);
-    color: var(--color-blanco);
-
-
+  transform: rotate(-90deg);
+  color: var(--color-gris-claro);
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+
+/* Proyecto expandido */
 .projectExpanded {
-    display: none;
-    width: 0;
+  display: none;
+  width: 0;
+}
 
+.gameBox:hover .projectExpanded,
+.coverContainer {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  min-width: 120px;
+  max-width: 240px;
+  height: 100%;
+  background: var(--gradient-dark);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  min-height: 130px;
+  max-height: 280px;
+  cursor: pointer;
+  margin: auto;
+  animation: fade-in 0.5s ease-out forwards;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
 }
-.gameBox:hover .projectExpanded, .coverContainer{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    min-width: 110px;
-    max-width: 220px;
-    height: 100;
-    background-color: var(--color-negro);
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    min-height: 130px;
-    max-height: 300px;
-    cursor: pointer;
-    margin: auto;
-    animation: fade-in 1s ease-out forwards;
+
+.gameBox:hover,
+.gamesContainer,
+.coverContainer {
+  height: calc(100% - 5px);
 }
-.gameBox:hover,  .gamesContainer, .coverContainer{
-    height: calc(100% - 5px);   
+
+.gamesContainer:hover {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
-.gamesContainer:hover{
-    overflow-x: auto;
-    overflow-y: hidden;
-}
+
+/* Contenedores de la portada */
 .leftCover,
 .rightCover,
 .cdContainer {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    z-index: 1;
-
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 1;
+  padding: var(--spacing-sm);
 }
 
 .projectThumbail {
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    width: 100%;
-    min-width: 40px;
-    max-width: 80px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    margin: auto;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 80%;
+  min-width: 40px;
+  max-width: 70px;
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin: auto;
+  border: 2px solid var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.projectThumbail:hover {
+  transform: scale(1.1);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
 }
 
 .projectLinkContainer {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    margin: auto;
-}
-.projectLinkImg{
-    width: 1rem;
-    min-width: 16px;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    background-color: var(--color-blanco);
-    border-radius: 50%;
-}
-.projectLink:hover{
-    background-color: var(--color-botones-hovered);
-    transition: ease-in 0.3s;
-}
-.projectLink:not(:hover){
-    transition: ease-out 0.3s;;
-}
-.projectLink:active{
-    cursor: progress;
-}
-.stableBtn, .projectLink{
-    padding: 8px 12px;
-    background-color: var(--color-botones-nothovered);
-    color: var(--color-blanco);
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-flex;
-    margin-top: 5px;
-    justify-content: center;
-    min-width: 30px;
-    max-width: 200px;
-    text-align: center;
-    cursor: pointer;
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin: auto;
 }
 
-.stableBtn:hover{
-    background-color: var(--color-botones-hovered);
-    transition: ease-in 0.3s;
+.projectLinkImg {
+  width: 1rem;
+  min-width: 16px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  background-color: var(--color-blanco);
+  border-radius: 50%;
 }
-.stableBtn:not(:hover){
-    transition: ease-out 0.3s;
+
+.projectLink {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--gradient-primary);
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  margin-top: var(--spacing-xs);
+  justify-content: center;
+  min-width: 60px;
+  max-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
 }
-.stableBtn:active{
-    cursor: progress;
+
+.projectLink:hover {
+  background: var(--color-botones-hovered);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
 }
+
+.stableBtn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--gradient-secondary);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  margin-top: var(--spacing-xs);
+  justify-content: center;
+  min-width: 70px;
+  max-width: 130px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
+}
+
+.stableBtn:hover {
+  background: var(--color-botones-hovered);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .arbolito,
+  .arbolPic,
+  .consola,
+  .consolaPic {
+    display: none;
+  }
+  
+  .libraryProjects,
+  .gamesContainer {
+    width: 90dvw;
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .libraryProjects,
+  .gamesContainer {
+    width: 90dvw;
+    max-width: 668px;
+  }
+}
+
