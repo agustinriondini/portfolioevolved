@@ -1,4 +1,4 @@
-/* Loader Container */
+
 #loader-container {
     position: fixed;
     top: 0;
@@ -16,52 +16,213 @@
     transition: opacity 0.5s;
 }
 
-/* Loader */
+/* Contenedor centrado del átomo */
 #loader {
-    border: 16px solid var(--color-ultratransparente-oscuro);
-    border-top: 16px solid transparent;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    z-index: 99999;
     position: relative;
-    animation: spin 1s linear infinite;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    z-index: 99999;
+    background: transparent;
 }
 
-/* Gradiente en el loader */
-#loader::before {
+/* Órbitas del átomo (centradas y rotando) */
+.orbitas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 0 -60px;
+    border: 1px solid rgba(252, 0, 255, 0.4);
+    border-radius: 50%;
+    animation: orbitRotate 5s linear infinite;
+}
+
+.orbitas::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    margin: -80px 0 0 -80px;
+    border: 1px solid rgba(0, 219, 222, 0.5);
     border-radius: 50%;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
-    clip-path: circle(50% at 50% 50%);
+    animation: orbitRotateRev 7s linear infinite;
+}
+
+.orbitas::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    border: 1px dashed rgba(252, 0, 255, 0.3);
+    border-radius: 50%;
+    animation: orbitRotate 6s linear infinite reverse;
+}
+
+/* Núcleo central FIJO */
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle, #fc00ff 25%, #00dbde 50%, #fc00ff 75%);
+    animation: nucleusPulse 1.6s ease-in-out infinite alternate;
+    box-shadow: 
+        0 0 25px #fc00ff, 
+        0 0 45px #00dbde,
+        inset 0 2px 8px rgba(255,255,255,0.6);
+    z-index: 5;
+}
+
+/* Protones - Órbita interna TIGHT alrededor del núcleo */
+.proton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #fc00ff, rgba(252,0,255,0.8));
+    border-radius: 50%;
+    box-shadow: 0 0 15px #fc00ff;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.proton:nth-child(1) {
+    margin: -4px 0 0 -4px;
+    animation-name: proton1Orbit;
+    transform-origin: 0 40px;
+}
+
+.proton:nth-child(2) {
+    margin: -4px 0 0 -4px;
+    animation-name: proton2Orbit;
+    transform-origin: 45px 25px;
+    animation-delay: -1s;
+}
+
+.proton:nth-child(3) {
+    margin: -4px 0 0 -4px;
+    animation-name: proton3Orbit;
+    transform-origin: -35px 35px;
+    animation-delay: -2s;
+}
+
+/* Neutrones - Órbita externa */
+.neutron {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    background: radial-gradient(circle, #00dbde, rgba(0,219,222,0.8));
+    border-radius: 50%;
+    box-shadow: 0 0 12px #00dbde;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.neutron:nth-child(4) {
+    margin: -3.5px 0 0 -3.5px;
+    animation-name: neutron1Orbit;
+    transform-origin: 0 60px;
+}
+
+.neutron:nth-child(5) {
+    margin: -3.5px 0 0 -3.5px;
+    animation-name: neutron2Orbit;
+    transform-origin: 65px 40px;
+    animation-delay: -1.5s;
+}
+
+.neutron:nth-child(6) {
+    margin: -3.5px 0 0 -3.5px;
+    animation-name: neutron3Orbit;
+    transform-origin: -55px 50px;
+    animation-delay: -3s;
+}
+
+/* Animaciones de órbita específicas */
+@keyframes proton1Orbit {
+    0% { transform: rotate(0deg) translateY(-40px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateY(-40px) rotate(-360deg); }
+}
+
+@keyframes proton2Orbit {
+    0% { transform: rotate(0deg) translate(45px, -25px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(45px, -25px) rotate(-360deg); }
+}
+
+@keyframes proton3Orbit {
+    0% { transform: rotate(0deg) translate(-35px, -35px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-35px, -35px) rotate(-360deg); }
+}
+
+@keyframes neutron1Orbit {
+    0% { transform: rotate(0deg) translateY(-60px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translateY(-60px) rotate(360deg); }
+}
+
+@keyframes neutron2Orbit {
+    0% { transform: rotate(0deg) translate(65px, -40px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translate(65px, -40px) rotate(360deg); }
+}
+
+@keyframes neutron3Orbit {
+    0% { transform: rotate(0deg) translate(-55px, -50px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translate(-55px, -50px) rotate(360deg); }
+}
+
+@keyframes nucleusPulse {
+    0% { transform: scale(1); box-shadow: 0 0 25px #fc00ff, 0 0 45px #00dbde; }
+    100% { transform: scale(1.15); box-shadow: 0 0 35px #fc00ff, 0 0 55px #00dbde; }
+}
+
+@keyframes orbitRotate {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1.02); }
+}
+
+@keyframes orbitRotateRev {
+    0% { transform: rotate(360deg) scale(1.02); }
+    100% { transform: rotate(0deg) scale(1); }
 }
 
 /* Texto de carga */
 #loading-text {
-    margin-top: 10px;
-    color: white;
-    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 500;
     text-align: center;
+    text-shadow: 0 0 20px rgba(252, 0, 255, 0.7);
+    animation: textGlow 2s ease-in-out infinite alternate;
 }
 
-/* Rotación */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes textGlow {
+    0% { text-shadow: 0 0 20px rgba(252, 0, 255, 0.7), 0 0 30px rgba(0, 219, 222, 0.5); }
+    100% { text-shadow: 0 0 25px rgba(252, 0, 255, 0.9), 0 0 40px rgba(0, 219, 222, 0.7); }
 }
 
-/* Activo */
+/* Estados */
 body.loading #loader-container {
     opacity: 1;
 }
 
-/* Inactivo */
 body:not(.loading) #loader-container {
     opacity: 0;
     pointer-events: none;
 }
+

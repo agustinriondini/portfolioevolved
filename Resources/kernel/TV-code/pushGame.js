@@ -1,5 +1,6 @@
 (function () {
-    var isTVOn = false;
+var isTVOn = localStorage.getItem('isTVOn') === 'true' || false;
+//console.log('TV state init:', isTVOn);
 
     var tvPowerButton = document.getElementById("tvPower");
     var tvRebootButton = document.getElementById("tvReboot");
@@ -26,6 +27,7 @@
             tvDisplay.innerHTML = '<video id="videoPlayer" src="./Resources/Videos/bootanimation.mp4" autoplay></video>';
             tvDisplay.classList.add('tv-on');
             isTVOn = true;
+            localStorage.setItem('isTVOn', 'true');
 
             setTimeout(function () {
                 tvRebootButton.disabled = false;
@@ -43,6 +45,7 @@
             tvDisplay.classList.remove('tv-on');
             tvDisplay.style.backgroundImage = '';
             isTVOn = false;
+            localStorage.setItem('isTVOn', 'false');
         }
     }
 
@@ -63,6 +66,7 @@
             tvDisplay.innerHTML = '';
             tvDisplay.classList.remove('tv-on');
             isTVOn = false;
+            localStorage.setItem('isTVOn', 'false');
 
             setTimeout(function () {
                 powerTV();
@@ -74,12 +78,14 @@
 
     // Exponer funciones globales
     window.playGameOnTv = function (projectId) {
+        //lonsole.log('Play attempt, isTVOn:', isTVOn);
         var tvDisplay = document.getElementById("tvDisplay");
+        if (!tvDisplay?.classList?.contains('tv-on')) isTVOn = false; // Sync visual
 
         var gameUrl = "https://agustinriondini.github.io/" + projectId + "/";
 
         if (!isTVOn) {
-            alert("Para jugar, debe encender la TV primero");
+            errorPopup("Para jugar, debe encender la TV primero");
             return;
         }
 
@@ -87,9 +93,11 @@
         tvDisplay.classList.add('tv-on');
     };
 
+    window.isTVOn = isTVOn; // Expose for debug
+
     window.playdemovid = function () {
         var tvDisplay = document.getElementById("tvDisplay");
-        alert("Proyecto en fase de desarrollo, verás un video demo de algunas características");
+        exitoPopup("Proyecto en fase de desarrollo", "Verás un video demo de algunas características");
         tvDisplay.innerHTML = '<video id="videoPlayer" src="./Resources/Videos/video_demo_penguinSAS.mp4" autoplay></video>';
         tvDisplay.classList.add('tv-on');
     };

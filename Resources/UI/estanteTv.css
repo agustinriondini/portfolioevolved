@@ -160,6 +160,7 @@
   max-width: 60px;
   display: flex;
   z-index: 1;
+  position: relative;
   align-items: center;
   margin: 0;
   justify-content: center;
@@ -209,7 +210,7 @@
   background: var(--gradient-dark);
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 2001;
   min-height: 130px;
   max-height: 280px;
   cursor: pointer;
@@ -350,6 +351,42 @@
   .gamesContainer {
     width: 90dvw;
     max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameBox {
+    min-width: 45px;
+    max-width: 55px;
+  }
+  
+  .gamesContainer {
+    height: auto !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    scrollbar-width: thin;
+  }
+  
+  .libraryProjects {
+    height: auto;
+    min-height: 200px;
+    padding: 1rem;
+    gap: 0;
+  }
+
+  .gameBox:hover .projectExpanded,
+  .coverContainer {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 280px !important;
+    min-width: 260px !important;
+    height: 180px !important;
+    z-index: 9999 !important;
+    border-radius: var(--radius-xl) !important;
   }
 }
 

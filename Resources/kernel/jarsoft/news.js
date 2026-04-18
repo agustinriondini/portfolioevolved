@@ -1,16 +1,20 @@
 function newalertver(){
-        alert("Para una experiencia más completa, utilice su dispositivo móvil en modo landscape");
+        if (window.innerWidth < 700) {
+                errorPopup("Para una experiencia más completa, utilice su dispositivo móvil en modo landscape");
+        }
 };
+
 function showAlert(event) {
     event.preventDefault();
-    alert("Ups! no sos vos, soy yo... Error#404 Parece que el recurso no esta disponible por el momento.");
+    errorPopup("Ups! no sos vos, soy yo... Error#404", "Parece que el recurso no esta disponible por el momento.");
 }
 
 function showUnavailableAlert(event) {
     event.preventDefault();
-    alert("Ups! no sos vos, soy yo... Error#01. Funcion en desarrollo");
+    errorPopup("Ups! no sos vos, soy yo... Error#01", "Funcion en desarrollo");
 }
 
+// Auto-bind links (runs after DOM ready via helper)
 document.addEventListener("DOMContentLoaded", function() {
     var alertLinks = document.querySelectorAll('a[href="#"]');
     alertLinks.forEach(function(link) {

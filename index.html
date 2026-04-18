@@ -21,8 +21,16 @@
 </head>
 <body id="fetch_and_display_content">
 
-    <!-- Loader -->
+    <!-- Loader Átomo -->
     <div id="loader-container">
+        <div class="orbitas"></div>
+        <div class="nucleus"></div>
+        <div class="proton"></div>
+        <div class="proton"></div>
+        <div class="proton"></div>
+        <div class="neutron"></div>
+        <div class="neutron"></div>
+        <div class="neutron"></div>
         <div id="loader"></div>
         <div id="loading-text">Cargando...</div>
     </div>
@@ -55,15 +63,21 @@
     });
     </script>
 
+    <!-- Loader para SPA (loaded early for module access) -->
+    <script src="./Resources/kernel/code/loader.js"></script>
+
     <script type="module" defer>
         import { formacion } from './Resources/kernel/subdirs/formacion.js';
+
         import { proyectos } from './Resources/kernel/subdirs/proyectos.js';
         import { profile } from './Resources/kernel/subdirs/profile.js';
         import { skills } from './Resources/kernel/subdirs/skills.js';
         const sections = { profile, formacion, proyectos, skills };
         const main = document.querySelector('main');
         const loadSection = async (name) => {
+            showLoader();
             const section = sections[name] || sections['profile'];
+
             // Remover scripts dinámicos anteriores para evitar duplicados o interferencias entre dependencias
             document.querySelectorAll('script[data-dynamic-script]').forEach(s => s.remove());
             // inyectar contenido al main
@@ -118,13 +132,14 @@
                 }
             });
             document.dispatchEvent(event);
+            hideLoader();
         };
         document.getElementById('commandCenter').addEventListener('click', e => {
-        const link = e.target.closest('a[data-section]');
-        if (link) {
-            e.preventDefault();
-            loadSection(link.dataset.section);
-        }
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                loadSection(link.dataset.section);
+            }
         });
         // Enforcing load al profile como punto inicial
         const initial = location.hash.replace('#', '') || 'profile';
@@ -133,7 +148,7 @@
             const current = location.hash.replace('#', '') || 'profile';
             loadSection(current);
         });
-        //Enforcing recall a las dependencias js con envent listener
+        //Enforcing recall a las dependencias js con event listener
         document.addEventListener('sectionLoaded', e => {
             const section = e.detail.name;
             //console.log(`Sección '${section}' cargada`); <--solo para depuracion
@@ -147,17 +162,32 @@
             if (section === 'formacion') {
                 requestAnimationFrame(() => ordenarListas());
             }
-            if (section ==='proyectos') {
+            if (section === 'proyectos') {
                 requestAnimationFrame(() => ordenarProyectos(), newalertver());
             }
         });
     </script>
-    <!-- Scripts adicionales -->
+    <!-- Scripts adicionales - non-defer menu first -->
+    <script src="./Resources/kernel/code/mobilecmdcenter.js"></script>
+    
+    <!-- Popup Helper -->
+    <script src="./Resources/kernel/code/renderizarRespuestas.js" defer></script>
+    
+    <!-- Others defer -->
     <script src="./Resources/kernel/code/animations.js" defer></script>
-    <script src="./Resources/kernel/code/loader.js" defer></script>
-    <script src="./Resources/kernel/code/mobilecmdcenter.js" defer></script>
     
     <!-- Scripts de JARSoft -->
     <script src="./Resources/kernel/jarsoft/version.js" defer></script>
+    
+    <!-- Explicit screen check init (early) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof initScreenCheck === 'function') initScreenCheck();
+      });
+      window.addEventListener('load', () => {
+        if (typeof checkMinScreen === 'function') checkMinScreen();
+      });
+    </script>
+
 </body>
 </html>

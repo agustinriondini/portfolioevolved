@@ -188,6 +188,7 @@ stylesheetlist:  [
     "./Resources/UI/tvdisplay.css"
 ],
 scripts: [
+    "./Resources/kernel/TV-code/tvControls.js",
     "./Resources/kernel/jarsoft/news.js",
     "./Resources/kernel/code/animations.js",
     "./Resources/kernel/TV-code/estanteria.js",

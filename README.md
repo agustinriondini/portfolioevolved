@@ -1,4 +1,16 @@
 ================================================================================================================================================
+## public_release_v2.0.0_update_20241201_build#23 VERSIONING_IMPROVEMENTS
+-[New] refactorizacion del control de version -> Resources/kernel/jarsoft/version.js. Ahora es objeto.
+-[New] Versionado semantico a v2.0.0.
+-[Update] Se mejoro la composicion del portfolio, siempre actualiza el DOM utilizando jQuery
+-[Update] Estandarizada fecha YYYY-MM-DD
+-[Update] Mejorada la interfaz de alertas. Uso de modales y eliminacion de alerts.
+-[Fixes] Corregidos errores visuales y comportamiento en dispositivos con menos de 700px de ancho de pantalla.
+-[Update] Nuevo loader UI
+-[Update] Popup de recomendación de landscape ahora solo aparece si el ancho del dispositivo es menor a 700px.
+================================================================================================================================================
+
+===============================================================================================================================================
 ## public_release_v1.3.1_update_25032026_build#22 HOTFIX
 -[Fixes] Correccion de comportamiento menu en modo responsive. (Luego de cambios visuales, el boton no abria/cerraba el menu)
 -[Update] Actualizada version y build22

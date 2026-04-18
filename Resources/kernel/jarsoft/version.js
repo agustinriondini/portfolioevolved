@@ -1,23 +1,26 @@
 $(document).ready(function() {
-    //tipo de release
-    var release = $('#release').text();
-    //version de portfolio
-    var actualver = $('#updateVer').text();
-    //fecha de publicacion
-    var lastUpdate =$('#release_date').text();
-    //build N°
-    var buildnumber = $('#build').text();
-    
-    //set nuevos valores
-    var release = "public_release_";
-    var actualver = "v1.3.2_";
-    var lastUpdate = "update_25032026_";
-    var buildnumber = "build#22";
+    // Centralized version information - Update this object for new releases
+    const VERSION_INFO = {
+        release: 'public_release',
+        version: 'v2.0.0',
+        date: '2024-12-01',
+        build: '#23'
+    };
 
-    if (actualver !== lastUpdate) {
-        $('#release').text(release);
-        $('#updateVer').text(actualver);
-        $('#release_date').text(lastUpdate);
-        $('#build').text(buildnumber);
-    }
+    // Update DOM elements
+    const elements = {
+        '#release': VERSION_INFO.release,
+        '#updateVer': VERSION_INFO.version,
+        '#release_date': VERSION_INFO.date,
+        '#build': VERSION_INFO.build
+    };
+
+    Object.entries(elements).forEach(([selector, value]) => {
+        const el = $(selector);
+        if (el.length) {
+            el.text(value);
+        }
+    });
+
+    //console.log('Version updated to:', VERSION_INFO); // For debugging
 });
