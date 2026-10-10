@@ -14,7 +14,6 @@ function showUnavailableAlert(event) {
     errorPopup("Ups! no sos vos, soy yo... Error#01", "Funcion en desarrollo");
 }
 
-// Auto-bind links (runs after DOM ready via helper)
 document.addEventListener("DOMContentLoaded", function() {
     var alertLinks = document.querySelectorAll('a[href="#"]');
     alertLinks.forEach(function(link) {

@@ -9,19 +9,20 @@
     <link rel="icon" href="./Resources/Images/Icons/mainIcon.png" type="image/x-icon">
     <title>JAR | Portfolio</title>
 
-    <!-- Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./Resources/UI/reset.css">
     <link rel="stylesheet" href="./Resources/UI/commandCenter.css">
     <link rel="stylesheet" href="./Resources/UI/footer.css">
     <link rel="stylesheet" href="./Resources/UI/loader.css">
 
-    <!-- Librerías externas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
 </head>
 <body id="fetch_and_display_content">
 
-    <!-- Loader Átomo -->
     <div id="loader-container">
         <div class="orbitas"></div>
         <div class="nucleus"></div>
@@ -35,20 +36,16 @@
         <div id="loading-text">Cargando...</div>
     </div>
 
-    <!-- Menú -->
     <div class="commandCenter" id="commandCenter"></div>
 
-    <!-- Contenido principal -->
     <main></main>
 
-    <!-- Footer -->
     <footer id="allFooter"></footer>
 
-    <!-- Scripts -->
     <script type="module" defer>
         import { buildMenu } from './Resources/kernel/builders/buildMenu.js';
         document.getElementById('commandCenter').innerHTML = buildMenu;
-    </script>
+</script>
 
     <script type="module" defer>
         import { buildFooter } from './Resources/kernel/builders/buildFooter.js';
@@ -61,9 +58,8 @@
             }
         });
     });
-    </script>
+</script>
 
-    <!-- Loader para SPA (loaded early for module access) -->
     <script src="./Resources/kernel/code/loader.js"></script>
 
     <script type="module" defer>
@@ -72,17 +68,16 @@
         import { proyectos } from './Resources/kernel/subdirs/proyectos.js';
         import { profile } from './Resources/kernel/subdirs/profile.js';
         import { skills } from './Resources/kernel/subdirs/skills.js';
-        const sections = { profile, formacion, proyectos, skills };
+        const sections = { proyectos, formacion, skills, profile };
         const main = document.querySelector('main');
         const loadSection = async (name) => {
             showLoader();
-            const section = sections[name] || sections['profile'];
+            const section = sections[name] || sections['proyectos'];
 
-            // Remover scripts dinámicos anteriores para evitar duplicados o interferencias entre dependencias
             document.querySelectorAll('script[data-dynamic-script]').forEach(s => s.remove());
-            // inyectar contenido al main
+
             main.innerHTML = section.html;
-            // Cargar scripts dinámicos y esperar que terminen de cargar
+
             if (section.scripts && Array.isArray(section.scripts)) {
                 let loadedScripts = 0;
 
@@ -101,9 +96,9 @@
             } else {
                 dispatchSectionLoaded(name, section.html);
             }
-            // titulos dinamicos
+
             document.title = section.title || 'JAR | Portfolio';
-            // stylesheets dinamicos
+
             document.querySelectorAll('link[data-dynamic-style]').forEach(link => link.remove());
             if (section.stylesheetlist && Array.isArray(section.stylesheetlist)) {
                 section.stylesheetlist.forEach(href => {
@@ -121,7 +116,6 @@
                 document.head.appendChild(style);
             }
 
-            // Actualizar historial
             history.pushState({}, '', `#${name}`);
         };
         const dispatchSectionLoaded = (name, html) => {
@@ -141,45 +135,43 @@
                 loadSection(link.dataset.section);
             }
         });
-        // Enforcing load al profile como punto inicial
-        const initial = location.hash.replace('#', '') || 'profile';
+
+        const initial = location.hash.replace('#', '') || 'proyectos';
         loadSection(initial);
         window.addEventListener('popstate', () => {
-            const current = location.hash.replace('#', '') || 'profile';
+            const current = location.hash.replace('#', '') || 'proyectos';
             loadSection(current);
         });
-        //Enforcing recall a las dependencias js con event listener
+
         document.addEventListener('sectionLoaded', e => {
             const section = e.detail.name;
-            //console.log(`Sección '${section}' cargada`); <--solo para depuracion
 
-            //Ejecutar si existe en el dom
             if (typeof ordenarListas === 'function') {
                 requestAnimationFrame(() => ordenarListas());
             }
 
-            //Enforcing recall a las dependencias js
             if (section === 'formacion') {
                 requestAnimationFrame(() => ordenarListas());
             }
             if (section === 'proyectos') {
-                requestAnimationFrame(() => ordenarProyectos(), newalertver());
+                if (typeof ordenarProyectos === 'function') {
+                    requestAnimationFrame(() => ordenarProyectos());
+                }
+                if (typeof newalertver === 'function') {
+                    newalertver();
+                }
             }
         });
-    </script>
-    <!-- Scripts adicionales - non-defer menu first -->
+</script>
+
     <script src="./Resources/kernel/code/mobilecmdcenter.js"></script>
-    
-    <!-- Popup Helper -->
+
     <script src="./Resources/kernel/code/renderizarRespuestas.js" defer></script>
-    
-    <!-- Others defer -->
+
     <script src="./Resources/kernel/code/animations.js" defer></script>
-    
-    <!-- Scripts de JARSoft -->
+
     <script src="./Resources/kernel/jarsoft/version.js" defer></script>
-    
-    <!-- Explicit screen check init (early) -->
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         if (typeof initScreenCheck === 'function') initScreenCheck();
@@ -187,7 +179,7 @@
       window.addEventListener('load', () => {
         if (typeof checkMinScreen === 'function') checkMinScreen();
       });
-    </script>
+</script>
 
 </body>
 </html>

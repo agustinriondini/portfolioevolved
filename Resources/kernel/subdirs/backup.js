@@ -1,7 +1,7 @@
 export const formacion = {
     title: "Formación | JAR Portfolio",
     html: `
-        <section id="formacion"><!--Formacion-->
+        <section id="formacion">
         <h2 class="sectionSubtitle">Formación Académica</h2>
         <div class="formacionContainer">
             <div class="collegeCard">
@@ -100,7 +100,7 @@ export const formacion = {
     </section>
     <script src="../kernel/mobilecmdcenter.js"></script>
     <script src="/Resources/kernel/orderlist.js"></script>
-            
+
         </section>
     `,
     stylesheet: "./Resources/UI/formacion.css",

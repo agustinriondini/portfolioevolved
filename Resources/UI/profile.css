@@ -1,4 +1,4 @@
-/* Animaciones modernas */
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -176,12 +176,12 @@ object-fit: contain;
         max-width: 668px;
         grid-template-columns: 1fr;
     }
-    
+
     #profile > article {
         width: 100%;
         max-width: 668px;
     }
-    
+
     .idcontainer {
         max-width: 280px;
     }

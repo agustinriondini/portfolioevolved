@@ -44,6 +44,5 @@ export const buildFooter = `
         <div class="compilacion"><span id="release" title="Clase de publicacion"></span><span id="updateVer" title="Numero de version">Error al obtener version</span><span id="release_date" title="Fecha de publicacion"></span><span id="build" title="Compilacion N°"></span></div>
         <a href="./Resources/kernel/subdirs/changelog.html" target="_blank" class="jarsoft" title="Link al historial de cambios">Historial de cambios</a>
     </div>
-    
 
 `;

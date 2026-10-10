@@ -1,13 +1,11 @@
 $(document).ready(function() {
-    // Centralized version information - Update this object for new releases
     const VERSION_INFO = {
         release: 'public_release',
-        version: 'v2.0.0',
-        date: '2024-12-01',
-        build: '#23'
+        version: 'v2.1.0',
+        date: '2026-10-09',
+        build: '#24'
     };
 
-    // Update DOM elements
     const elements = {
         '#release': VERSION_INFO.release,
         '#updateVer': VERSION_INFO.version,
@@ -21,6 +19,4 @@ $(document).ready(function() {
             el.text(value);
         }
     });
-
-    //console.log('Version updated to:', VERSION_INFO); // For debugging
 });

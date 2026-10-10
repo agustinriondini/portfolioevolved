@@ -1,5 +1,33 @@
+================================================================================================================================
+## public_release_v2.1.0_update_20261009_build#24 MERGE Y ACTUALIZACION DE CONTENIDO
+-[New] Seccion de catalogo de proyectos debajo de la estanteria con acordeon interactivo exclusivo (un proyecto a la vez).
+-[New] Indicadores SVG de plataforma (Web, Android, Windows) y badges de estado de desarrollo (En curso, Finalizado).
+-[New] Indicadores SVG de soporte tecnico (Activo / Inactivo) y stack de tecnologias utilizadas en formato SVG por proyecto.
+-[New] Incorporado Project-DWA (Videojuego 3D Unity 6 URP, arquitectura Data-Driven con ScriptableObjects).
+-[New] Incorporado Project-PetServices (Ecosistema Mobile Android Kotlin Jetpack Compose y Backend Node.js con live tracking).
+-[Update] Actualizado Penguin Platform (Identity & Workspace Manager, IdP/SSO con MFA, arquitectura Monorepo).
+-[New] Incorporada galeria interactiva de capturas para Penguin Platform (Dashboard, Identidad & MFA, Centro de Conocimiento) tanto en acordeon como en Penguindroid TV.
+-[Delete] Eliminado NeoSimulator del catalogo de proyectos y de la biblioteca.
+-[Update] Ordenado el catalogo de proyectos y desarrollos por prioridad: proyectos En curso primero, proyectos Finalizados con soporte activo en segundo lugar, y proyectos Finalizados sin soporte al final.
+-[Update] Configurados Project-PetServices y Project-DWA como proyectos estrictamente confidenciales con insignias de privacidad y exclusion de codigo publico.
+-[Fixes] Implementado puente de hover continuo en las cajas de la estanteria para que el preview no desaparezca al mover el cursor hacia las acciones.
+-[Fixes] Automatizado el cierre y ocultacion inmediata del preview emergente al hacer click en cualquier accion que ejecute contenido en Penguindroid TV.
+-[Fixes] Corregida estanteria para que entren todos los juegos de forma fluida sin scrollbar en X y restaurada la visualizacion emergente del preview al hacer hover.
+-[New] Incorporadas capturas de gameplay de Project-DWA (Mundo Abierto Unity 6 URP y Triceratops) en estanteria, acordeon y TV.
+-[Fixes] Correccion de errores en botones del android tv. Ahora los botones estan al mismo nivel que el borde superior de la tv.
+-[Fixes] Correccion de errores en la estanteria de proyectos. Ahora los proyectos se abren y cierran correctamente.
+-[Update_UI] Controles de expansion con iconos SVG de flecha y cierre X interactivos.
+-[Update] Limpieza integral de codigo.
+-[Update_UI] Rediseño UI android tv.
+-[Update_UI] Rediseño UI Skills.
+-[Update_UI] Rediseño UI Formacion.
+-[Update_UI] Rediseño UI Changelog.
+-[Update_UI] Implementacion de simulador de SO en adndroid tv.
+-[Update_UI] Se traslado la informacion del Profile de pestaña a aplicacion en adndroid tv.
+-[Update] Actualizacion de version semantica a v2.1.0 build #24.
+================================================================================================================================
 ================================================================================================================================================
-## public_release_v2.0.0_update_20241201_build#23 VERSIONING_IMPROVEMENTS
+## public_release_v2.0.0_update_20241201_build#23 MEJORAS-DE-RENDIMIENTO_Y-UX_BUNDLE
 -[New] refactorizacion del control de version -> Resources/kernel/jarsoft/version.js. Ahora es objeto.
 -[New] Versionado semantico a v2.0.0.
 -[Update] Se mejoro la composicion del portfolio, siempre actualiza el DOM utilizando jQuery
@@ -11,11 +39,11 @@
 ================================================================================================================================================
 
 ===============================================================================================================================================
-## public_release_v1.3.1_update_25032026_build#22 HOTFIX
+## public_release_v1.3.1_update_25032026_build#22 HOTFIX-ERROR-DEL-MENU
 -[Fixes] Correccion de comportamiento menu en modo responsive. (Luego de cambios visuales, el boton no abria/cerraba el menu)
 -[Update] Actualizada version y build22
 ================================================================================================================================================
-## public_release_v1.3.1_update_25032026_build#21 UI-bundle_update
+## public_release_v1.3.1_update_25032026_build#21 UI-BUNDLE-UPDATE
 -[Update] Cambios y mejoras visuales en el diseño general del portfolio.
 -[Update] Nueva profile pic.
 -[Update] Actualizacion de version y changelog, build#21 update 25/03/2026.
@@ -23,7 +51,7 @@
 -[Fixes] Cambios en funcones de control de proyectos y ejecucion en tv.
 ================================================================================================================================================
 
-## public_release_v1.2.4_update_18052025_build#20
+## public_release_v1.2.4_update_18052025_build#20 MERGED-TO-SPA
 -[New] Se reemplazo la metodologia MPA (Multi page application) a SPA (Single page application).
 -[Update] Refacorizacion del proyecto para adaptarlo a SPA, secciones dinamicas.
 -[Update] Actualizacion de rutas y directorios en todos los archivos.
@@ -38,12 +66,12 @@
 
 
 ================================================================================================================================================
-## public_release_v1.2.3_update_22022025_build#19
+## public_release_v1.2.3_update_22022025_build#19 HOTFIX-GITHUBPAGES
 -[Fixes] Hotfix para obtener los recursos de imagen del menu tv para githubpages.
 -[Update] Readme.md // changelog
 -[Update] #build19
 ================================================================================================================================================
-## public_release_v1.2.3_update_22022025_build#18
+## public_release_v1.2.3_update_22022025_build#18 UI-BUNDLE
 -[New] Se agregaron nuevos iconos al menu del tv.
 -[New] Se agrego una funcion especifica para ordenar alfabeticamente los proyectos en la estanteria.
 -[New] Todas las listas se ordenan automaticamente por orden alfabetico.
@@ -60,7 +88,7 @@
 -[Update] Actualizacion del readme.md // changelog
 -[updated_files] 25. Update 22/02/2025
 ================================================================================================================================================
-## public_release_v1.2.1_update_31102024_build#17
+## public_release_v1.2.1_update_31102024_build#17 BUGFIXES-GENERALES
 - [Fixes] Corrección en el funcionamiento del loader.
 - [Fixes] Corrección de errores de diseño en moviles y tablets de la seccion proyectos.
 - [Fixes] Correccion de transparencias. Mejor visibilidad para el contenido.
@@ -72,10 +100,10 @@
 - [New] Implementacion del registro de cambios. (Fetch readme.md content)
 - [New] Implementacion del loader en todas las secciones.
 ================================================================================================================================================
-## public_release_v1.2.1_update_31102024_build#15
+## public_release_v1.2.1_update_31102024_build#15 HOTFIX-UI
 - [Hotfix] Correccion de limites de diseño post update 23102024 en la build 14.
 ================================================================================================================================================
-## public_release_v1.2.0_update_23102024_build#14
+## public_release_v1.2.0_update_23102024_build#14 ACTUALIZACION-CONTENIDO
 - [Update] Actualizacion del contenido de skills.
 - [Update] Cambio de animaciones y estilos en skills.
 - [Update] Mejorada la UI.

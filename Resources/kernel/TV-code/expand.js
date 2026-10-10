@@ -3,11 +3,11 @@ var tvDisplay = document.getElementById("tvDisplay");
 
 if (tvDisplay.requestFullscreen) {
 tvDisplay.requestFullscreen();
-} else if (tvDisplay.mozRequestFullScreen) { /* Firefox */
+} else if (tvDisplay.mozRequestFullScreen) { 
 tvDisplay.mozRequestFullScreen();
-} else if (tvDisplay.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+} else if (tvDisplay.webkitRequestFullscreen) { 
 tvDisplay.webkitRequestFullscreen();
-} else if (tvDisplay.msRequestFullscreen) { /* IE/Edge */
+} else if (tvDisplay.msRequestFullscreen) { 
 tvDisplay.msRequestFullscreen();
 }
 }

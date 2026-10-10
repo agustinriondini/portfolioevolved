@@ -1,12 +1,7 @@
-/**
- * renderizarRespuestas.js - Reusable Popup Helper
- * Popups: errorPopup, exitoPopup, definirPopup + Global Screen Check
- */
 
 let scrollPosition = 0;
 let screenCheckActive = false;
 
-// CSS Styles (inline for modals - responsive, modern, backdrop blur)
 const modalStyles = `
   .popup-overlay {
     position: fixed;
@@ -125,7 +120,6 @@ const modalStyles = `
   }
 `;
 
-// Inject global styles once
 const styleId = 'popup-styles';
 if (!document.getElementById(styleId)) {
   const style = document.createElement('style');
@@ -149,12 +143,12 @@ function unlockScroll() {
 }
 
 function createPopup(type = 'info', title, message, detail = '', confirmText = 'Aceptar', cancelText = 'Cancelar') {
-  // Remove existing popups
+
   document.querySelectorAll('.popup-overlay').forEach(el => el.remove());
 
   const overlay = document.createElement('div');
   overlay.className = `popup-overlay ${type}`;
-  
+
   overlay.innerHTML = `
     <div class="popup-modal">
       <button class="popup-close" onclick="this.closest('.popup-overlay').remove(); unlockScroll();">&times;</button>
@@ -170,10 +164,9 @@ function createPopup(type = 'info', title, message, detail = '', confirmText = '
 
   document.body.appendChild(overlay);
   lockScroll();
-  
+
   requestAnimationFrame(() => overlay.classList.add('active'));
 
-  // ESC key
   const escHandler = (e) => {
     if (e.key === 'Escape') {
       overlay.remove();
@@ -184,14 +177,12 @@ function createPopup(type = 'info', title, message, detail = '', confirmText = '
   document.addEventListener('keydown', escHandler);
 }
 
-// Public API
 window.errorPopup = (message, detail = '') => {
   createPopup('error', 'Error', message, detail);
-  
-  // ONLY auto-redirect for screen size errors (not landscape warning or others)
+
   if (detail.includes('400px') || detail.includes('500px')) {
     setTimeout(() => {
-      window.location.hash = 'profile';
+      window.location.hash = 'proyectos';
     }, 3000);
   }
 };
@@ -204,7 +195,6 @@ window.definirPopup = (title, content, confirmText = 'Aceptar', cancelText = 'Ca
   createPopup('info', title, content, '', confirmText, cancelText);
 };
 
-// Screen Size Check (min 400x500px)
 window.checkMinScreen = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -221,30 +211,24 @@ window.checkMinScreen = () => {
 window.initScreenCheck = () => {
   if (screenCheckActive) return;
   screenCheckActive = true;
-  
-  // Initial check
+
   checkMinScreen();
-  
-  // Resize listener (debounced)
+
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(checkMinScreen, 250);
   });
-  
-  // Section loaded check
+
   document.addEventListener('sectionLoaded', checkMinScreen);
 };
 
-// Auto-init if DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initScreenCheck);
 } else {
   initScreenCheck();
 }
 
-// Export for modules (if needed)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { errorPopup, exitoPopup, definirPopup, checkMinScreen, initScreenCheck };
 }
-

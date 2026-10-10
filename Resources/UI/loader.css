@@ -16,7 +16,6 @@
     transition: opacity 0.5s;
 }
 
-/* Contenedor centrado del átomo */
 #loader {
     position: relative;
     width: 220px;
@@ -26,7 +25,6 @@
     background: transparent;
 }
 
-/* Órbitas del átomo (centradas y rotando) */
 .orbitas {
     position: absolute;
     top: 50%;
@@ -65,7 +63,6 @@
     animation: orbitRotate 6s linear infinite reverse;
 }
 
-/* Núcleo central FIJO */
 .nucleus {
     position: absolute;
     top: 50%;
@@ -84,7 +81,6 @@
     z-index: 5;
 }
 
-/* Protones - Órbita interna TIGHT alrededor del núcleo */
 .proton {
     position: absolute;
     top: 50%;
@@ -119,7 +115,6 @@
     animation-delay: -2s;
 }
 
-/* Neutrones - Órbita externa */
 .neutron {
     position: absolute;
     top: 50%;
@@ -154,7 +149,6 @@
     animation-delay: -3s;
 }
 
-/* Animaciones de órbita específicas */
 @keyframes proton1Orbit {
     0% { transform: rotate(0deg) translateY(-40px) rotate(0deg); }
     100% { transform: rotate(360deg) translateY(-40px) rotate(-360deg); }
@@ -200,7 +194,6 @@
     100% { transform: rotate(0deg) scale(1); }
 }
 
-/* Texto de carga */
 #loading-text {
     margin-top: 30px;
     color: #ffffff;
@@ -216,7 +209,6 @@
     100% { text-shadow: 0 0 25px rgba(252, 0, 255, 0.9), 0 0 40px rgba(0, 219, 222, 0.7); }
 }
 
-/* Estados */
 body.loading #loader-container {
     opacity: 1;
 }
@@ -225,4 +217,3 @@ body:not(.loading) #loader-container {
     opacity: 0;
     pointer-events: none;
 }
-

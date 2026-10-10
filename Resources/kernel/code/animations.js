@@ -1,4 +1,4 @@
-/*commandcenter*/
+
 document.addEventListener("DOMContentLoaded", function() {
     var logo = document.querySelector(".menuButtonContainer");
     var nav = document.querySelector(".navContainer");
@@ -20,7 +20,7 @@ function loadScriptsSequentially(scripts) {
     return scripts.reduce((promise, src) => {
         return promise.then(() => new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = `${src}?t=${Date.now()}`; // Cache buster
+            script.src = `${src}?t=${Date.now()}`; 
             script.setAttribute('data-dynamic-script', 'true');
             script.onload = resolve;
             script.onerror = () => reject(new Error(`Error cargando script: ${src}`));
